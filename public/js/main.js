@@ -55,3 +55,27 @@ function subMenuHandler() {
 for (var i = 0; i < SubNavList.length; i++) {
     SubNavList[i].addEventListener('click', subMenuHandler)
 }
+
+//WINDOW ONSCROLL AND ONLOAD
+window.onscroll = function () {
+    headerSticky()
+    
+};
+window.onload = function () {
+    headerSticky()
+};
+
+const mainHeader = document.querySelector('header')
+const body = document.querySelector('body')
+var sticky = mainHeader.offsetTop;
+
+//HEADER STICKY
+function headerSticky() {
+    if (window.pageYOffset > sticky) {
+        mainHeader.classList.add("headerSticky");
+        body.classList.add("body-lock");
+    } else {
+        mainHeader.classList.remove("headerSticky");
+        body.classList.remove("body-lock");
+    }
+}
