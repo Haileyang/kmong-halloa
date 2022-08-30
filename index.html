@@ -58,13 +58,56 @@
             </div>
             <div class="header-right">
                 <div class="login-status">
-                    <div class="before-login">
+                    <!-- <div class="before-login">
                         <span class="btn fill">
                             <a href="">로그인</a>
                         </span>
-                    </div>
-                    <div class="after-login hidden">
-                        <figure class="profile"><img src="/public/img/profile-default.png" alt="profile-default"></figure>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="/public/img/profile-default.png" alt="profile-default"></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="/public/img/icon-logout.png" alt="logout"></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <span class="mobile-btn" onclick="mobileOpen()">
@@ -75,7 +118,7 @@
         <div class="mobile-menu-open">
             <div class="inr">
                 <div class="mobile-menu-profile">
-                    <figure><img src="/public/img/profile-default.png" alt=""></figure>
+                    <!-- <figure><img src="/public/img/profile-default.png" alt=""></figure> -->
                     <div class="login-profile">
                         <!-- <div class="before-login">로그인 및 회원가입</div> -->
                         <div class="after-login">

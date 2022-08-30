@@ -289,9 +289,60 @@ header .header-right .before-login .btn:hover {
 header .header-right .before-login .btn:hover a {
   color: #2464EB;
 }
+header .header-right .after-login {
+  font-size: 20px;
+  display: flex;
+  text-decoration: underline;
+  position: relative;
+}
+header .header-right .after-login .greeting {
+  font-size: 14px;
+  font-weight: 400;
+}
 header .header-right .after-login img {
   max-height: 55px;
   cursor: pointer;
+}
+header .header-right .after-login .after-login-menu {
+  display: none;
+  position: absolute;
+  width: 260px;
+  right: 0;
+  top: 70px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: -10px 5px 34px rgba(255, 255, 255, 0.25);
+}
+header .header-right .after-login .after-login-menu.active {
+  display: block;
+}
+header .header-right .after-login .after-login-menu .login-mypage-menus {
+  margin-bottom: 20px;
+}
+header .header-right .after-login .after-login-menu .login-mypage-menu {
+  margin-bottom: 15px;
+}
+header .header-right .after-login .after-login-menu .login-mypage-menu a {
+  display: flex;
+}
+header .header-right .after-login .after-login-menu .login-mypage-menu figure {
+  margin-right: 15px;
+}
+header .header-right .after-login .after-login-menu .login-mypage-menu img {
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  display: inline-block;
+}
+header .header-right .after-login .logout {
+  position: static;
+  text-align: center;
+  transform: none;
+  display: block;
+}
+header .header-right .after-login .logout img {
+  max-height: 24px;
 }
 header .mobile-menu-open {
   position: fixed;

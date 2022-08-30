@@ -1,3 +1,16 @@
+const mainHeader = document.querySelector('header')
+const body = document.querySelector('body')
+var sticky = mainHeader.offsetTop;
+
+//WINDOW ONSCROLL AND ONLOAD
+window.onscroll = function () {
+    headerSticky()
+    
+};
+window.onload = function () {
+    headerSticky()
+};
+
 //ACCODRIAN DROPBOX EVENT (multiple) -start
 const accordianItemHeaders = document.querySelectorAll(
     ".accordian-item-header"
@@ -33,10 +46,12 @@ accordianItemHeaders.forEach(accordianItemHeader => {
 function mobileClose(){
     const mobileMenuOpen = document.querySelector('.mobile-menu-open')
     mobileMenuOpen.classList.remove('active')
+    body.classList.remove("body-lock");
 }
 function mobileOpen(){
     const mobileMenuOpen = document.querySelector('.mobile-menu-open')
     mobileMenuOpen.classList.add('active')
+    body.classList.add("body-lock");
 }
 
 // MOBILE NAV SCRIPT - TOGGLE BTN
@@ -56,26 +71,17 @@ for (var i = 0; i < SubNavList.length; i++) {
     SubNavList[i].addEventListener('click', subMenuHandler)
 }
 
-//WINDOW ONSCROLL AND ONLOAD
-window.onscroll = function () {
-    headerSticky()
-    
-};
-window.onload = function () {
-    headerSticky()
-};
-
-const mainHeader = document.querySelector('header')
-const body = document.querySelector('body')
-var sticky = mainHeader.offsetTop;
 
 //HEADER STICKY
 function headerSticky() {
     if (window.pageYOffset > sticky) {
         mainHeader.classList.add("headerSticky");
-        body.classList.add("body-lock");
     } else {
         mainHeader.classList.remove("headerSticky");
-        body.classList.remove("body-lock");
     }
+}
+
+function loginMypageToggle(){
+    const afterLoginMenu = document.querySelector('.after-login-menu')
+    afterLoginMenu.classList.toggle('active')
 }

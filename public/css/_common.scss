@@ -235,9 +235,56 @@ header{
             }
         }
         .after-login{
+            font-size: 20px;
+            display: flex;
+            text-decoration: underline;
+            position: relative;
+            .greeting{
+                font-size: 14px;
+                font-weight: 400;
+            }
             img{
                 max-height: 55px;
                 cursor: pointer;
+            }
+            .after-login-menu{
+                display: none;
+                position: absolute;
+                width: 260px;
+                right: 0; top: 70px;
+                background-color: #fff;
+                padding: 25px;
+                border-radius: 20px;
+                box-shadow: -10px 5px 34px rgba(255, 255, 255, 0.25);
+                &.active{
+                    display: block;
+                }
+                .login-mypage-menus{
+                    margin-bottom: 20px;
+                }
+                .login-mypage-menu{
+                    margin-bottom: 15px;
+                    a{
+                        display: flex;
+                    }
+                    figure{
+                        margin-right: 15px;
+                    }
+                    img{
+                        width: 25px;height: 25px;
+                        background-color: #ccc;
+                        display: inline-block;
+                    }
+                }
+            }
+            .logout{
+                position: static;
+                text-align: center;
+                transform: none;
+                display: block;
+                img{
+                    max-height: 24px;
+                }
             }
         }
    }
