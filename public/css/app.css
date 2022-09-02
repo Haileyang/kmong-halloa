@@ -725,7 +725,6 @@ footer .footer-bottom .footer-right p {
 }
 .section {
   padding: 135px 0;
-  overflow: hidden;
 }
 
 #main-visual {
@@ -1452,7 +1451,6 @@ footer .footer-bottom .footer-right p {
 }
 
 .main-free-banner {
-  overflow: x;
   background-color: #2464EB;
   padding: 0 !important;
   position: relative;
@@ -1889,6 +1887,8 @@ footer .footer-bottom .footer-right p {
   }
   .main-studymate-banner .inr img {
     width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .main-program .main-program-top .main-program-tit {
     margin-bottom: 30px;
@@ -2016,7 +2016,7 @@ footer .footer-bottom .footer-right p {
   .main-free-banner img {
     max-height: 220px;
     bottom: 0;
-    right: -30px;
+    right: 0;
     position: absolute;
   }
   .main-free-banner .banner-content {

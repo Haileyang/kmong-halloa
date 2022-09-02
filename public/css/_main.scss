@@ -1,6 +1,5 @@
 .section{
     padding: 135px 0;
-    overflow: hidden;
 }
 #main-visual{
     width: 100%; height: 665px;
@@ -723,7 +722,6 @@
     }
 }
 .main-free-banner{
-    overflow: x;
     background-color: $color-primary;
     padding: 0!important;
     position: relative;
@@ -1248,6 +1246,7 @@
             display: block;
             img{
                 width: 100%;
+                object-fit: contain;
             }
         }
     }
@@ -1399,7 +1398,7 @@
         img{
             max-height: 220px;
             bottom: 0;
-            right: -30px;
+            right: 0;
             position: absolute;
         }
         .banner-content{
