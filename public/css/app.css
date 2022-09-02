@@ -2007,9 +2007,6 @@ footer .footer-bottom .footer-right p {
     width: 20px;
     height: 20px;
   }
-  .main-free-banner {
-    overflow: hidden;
-  }
   .main-free-banner figure::before {
     display: none;
   }
