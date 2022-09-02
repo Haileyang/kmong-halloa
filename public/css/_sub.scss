@@ -1,0 +1,407 @@
+.sub{
+    padding: 80px 0;
+    .sub-title-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+        h1{
+            font-size: 45px;
+            font-weight: 700;   
+        }
+        .breadscrumbs{
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            li{
+                font-size: 14px;
+                &:not(:last-child)::after{
+                    content:"";
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid #000;
+                    border-left: 1px solid #000;
+                    transform: rotate(135deg);
+                    margin: 0 8px;
+                }
+                &:last-of-type{
+                    font-weight: 700;
+                }
+                &:first-of-type{
+                    font-family: $font-roboto;
+                }
+            }
+        }
+    }
+    .sub-mission{
+        .mission-list{
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            .mission-left{
+                min-width: 295px;
+                max-width: 295px;
+                margin-right: 70px;
+                display: flex;
+                flex-direction: column;
+                strong{
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                }
+                figure{
+                    margin-top: auto;
+                    img{
+                        max-height: 125px;
+                    }
+                }
+            }
+            .mission-right{
+                .mission-contents{
+                    padding: 25px 0;
+                    border-top: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    display: flex;
+                    min-height: 350px;
+                    li{
+                        flex: 1;
+                        strong{
+                            font-size: 20px;
+                            margin-bottom: 25px;
+                            display: block;
+                            line-height: 1.3;
+                        }
+                        p{
+                            font-size: 16px;
+                            line-height: 1.3;
+                        }
+                        & + li{
+                            margin-left: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub-program{
+        .program-lists{
+            display: flex;
+            flex-wrap: wrap;
+            .program-list{
+                width: calc(100% / 3 - 15px);
+                margin-bottom: 20px;
+                &:not(:nth-child(3n)) + .program-list{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .comparison-lists{
+        .comparison-list{
+            position: relative;
+            padding-top: 95px;
+            margin-bottom: 100px;
+            .comparison-tit{
+                width: 85%;
+                padding: 26px 50px;
+                font-size: 30px;
+                font-weight: 700;
+                display: block;
+                position: absolute;
+                left: 0;top: 0;
+                background-color: #F4F7FE;
+                color: $color-primary;
+            }
+            .comparison-content{
+                min-height: 440px;
+                padding-right: 612px;
+                display: flex;
+                >figure{
+                    position: absolute;
+                    right: 0; top: 0;
+                    img{
+                        max-height: 535px;
+                    }
+                }
+                .comparison-procons{
+                    margin-top: 40px;
+                    .comparison-procon{
+                        display: flex;
+                        margin-bottom: 25px;
+                        img{
+                            max-height: 55px;
+                        }
+                    }
+                    .comparison-procon-lists{
+                        margin-left: 30px;
+                        .comparison-procon-list{
+                            font-size: 18px;
+                            line-height: 1.3;
+                            position: relative;
+                            padding-left: 20px;
+                            margin-bottom: 15px;
+                            &::before{
+                                content:"";
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: #ccc;
+                                position: absolute;
+                                left: 0; top: 10px;
+                            }
+                        }
+
+                    }
+                }
+            }
+            &:last-child{
+                .comparison-tit{
+                    text-align: right;
+                    left: unset;
+                    right: 0;
+                    background-color: #F7F5FE;
+                    color: $color-secondary;
+                }
+                .comparison-content{
+                    flex-direction: row-reverse;
+                    padding-right: 0; padding-left: 612px;
+                    >figure{
+                        right: unset;
+                        left: 0;
+                        top: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1200px){
+    .sub{
+       .sub-mission {
+        .mission-list {
+            .mission-left{
+                margin-right: 50px;
+                min-width: 250px;
+                max-width: 250px;
+                strong{
+                    font-size: 25px;
+                }
+                figure{
+                    img{
+                        max-height: 100px;
+                    }
+                }
+            }
+        }
+       }
+        .comparison-lists {
+            .comparison-list {
+                padding-top: 75px;
+                .comparison-tit{
+                    padding: 20px 40px;
+                    font-size: 25px;
+                }
+                .comparison-content {
+                    padding-right: 500px;
+                    .comparison-procons {
+                        .comparison-procon-lists {
+                            .comparison-procon-list{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    > figure {
+                        img{
+                            max-height: 435px;
+                        }
+                    }
+                }
+                &:last-child{
+                    .comparison-content{
+                        padding-right: 0;
+                        padding-left: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    .sub {
+        .sub-title-wrap {
+            h1{
+                font-size: 35px;
+            }
+        }
+        .sub-mission{
+            .mission-list{
+                display: block;
+                .mission-left{
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 100%;
+                    min-width: 100%;
+                    width: 100%;
+                    figure{
+                        img{
+                            max-height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+        .comparison-lists {
+            .comparison-list {
+                
+                .comparison-tit{
+                    width: 100%;
+                }
+                .comparison-content{
+                    padding-left: 0!important;
+                    padding-right: 0!important;
+                    display: flex;
+                    flex-direction: column-reverse!important;
+                    > figure {
+                        position: static;
+                        text-align: right;
+                        img{
+                            max-height: 645px;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .comparison-procons{
+                        display: flex;
+                        .comparison-procon{
+                            // display: block;
+                            img{
+                                max-height: 45px;
+                            }
+                            & + .comparison-procon{
+                                margin-left: 50px;
+                            }
+                        }
+                        .comparison-procon-lists{
+                            margin-left:20px;
+                        }
+                    }
+                }
+                &:last-of-type{
+                    .comparison-content{
+                        >figure{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px){
+    
+
+    .sub {
+        padding: 50px 0 ;
+        .sub-title-wrap {
+            margin-bottom: 50px;
+            display: block;
+            h1{
+                font-size: 25px;
+            }
+           .breadscrumbs {
+                margin-top: 20px;
+                justify-content:flex-end;
+                border-top: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                padding: 15px  0;
+                
+                li{
+                    font-size: 12px;
+                }
+           }
+        }
+        .sub-mission{
+            .mission-list {
+                .mission-left{
+                    strong{
+                        font-size: 22px;
+                    }
+                }
+                .mission-right {
+                    .mission-contents{
+                        display: block;
+                        li{
+                            strong{
+                                font-size: 18px;
+                                margin-bottom: 20px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                            & + li{
+                                margin-left: 0; 
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sub-program{
+            .program-lists {
+                .program-list{
+                    margin-bottom: 10px;
+                    width: calc(100% / 2 - 5px);
+                    img{
+                        border-radius: 10px;
+                    }
+                    strong{
+                        font-size: 14px;
+                        left: 15px;bottom: 15px;
+                    }
+                    &:not(:nth-child(3n)) + .program-list{
+                        margin-left: 0;
+                    }
+                    &:not(:nth-child(2n)) + .program-list{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .comparison-lists {
+            .comparison-list {
+                margin-bottom: 50px;
+                .comparison-tit{
+                    padding: 20px;
+                    font-size: 20px;
+                    text-align: left!important;
+                }
+                .comparison-content {
+                    .comparison-procons{
+                        display: block;
+                        .comparison-procon{
+                            img{
+                                max-height: 35px;
+                            }
+                            .comparison-procon-list{
+                                padding-left: 15px;
+                                font-size: 14px;
+                                &::before{
+                                    top: 7px;
+                                }
+                            }
+                            & + .comparison-procon{
+                                margin-left: 0; 
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

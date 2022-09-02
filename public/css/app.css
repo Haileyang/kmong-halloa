@@ -105,6 +105,10 @@ body, a {
   color: #2464EB;
 }
 
+.color-secondary {
+  color: #5620A8;
+}
+
 .font-roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -721,6 +725,7 @@ footer .footer-bottom .footer-right p {
 }
 .section {
   padding: 135px 0;
+  overflow: hidden;
 }
 
 #main-visual {
@@ -1192,15 +1197,16 @@ footer .footer-bottom .footer-right p {
 .main-program .program-swiper .swiper-container {
   overflow: visible;
 }
-.main-program .program-swiper-content {
+
+.program-swiper-content {
   position: relative;
 }
-.main-program .program-swiper-content img {
+.program-swiper-content img {
   border-radius: 20px;
   width: 100%;
   max-height: 503px;
 }
-.main-program .program-swiper-content strong {
+.program-swiper-content strong {
   font-size: 25px;
   font-weight: 700;
   color: #fff;
@@ -1209,14 +1215,15 @@ footer .footer-bottom .footer-right p {
   bottom: 40px;
   line-height: 1.5;
 }
-.main-program .program-swiper-content .best {
+.program-swiper-content .best {
   position: absolute;
   left: -9px;
   top: 20px;
   display: inline-block;
 }
-.main-program .program-swiper-content .best img {
+.program-swiper-content .best img {
   max-height: 62px;
+  border-radius: 0;
 }
 
 .main-highlight {
@@ -1564,7 +1571,7 @@ footer .footer-bottom .footer-right p {
   .main-program .main-program-top img {
     max-height: 420px;
   }
-  .main-program .program-swiper-content strong {
+  .program-swiper-content strong {
     font-size: 20px;
     left: 25px;
     bottom: 25px;
@@ -1895,9 +1902,9 @@ footer .footer-bottom .footer-right p {
   .main-program .program-swiper strong {
     font-size: 18px;
   }
-  .main-program .program-swiper .program-swiper-content .best img {
+  .program-swiper-content .best img {
     max-height: 45px;
-    border-radius: 0;
+    border-radius: 0 !important;
   }
   .main-highlight {
     margin-bottom: 150px;
@@ -2020,5 +2027,347 @@ footer .footer-bottom .footer-right p {
   }
   .main-free-banner .banner-content small {
     font-size: 16px;
+  }
+}
+.sub {
+  padding: 80px 0;
+}
+.sub .sub-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.sub .sub-title-wrap h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.sub .sub-title-wrap .breadscrumbs {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.sub .sub-title-wrap .breadscrumbs li {
+  font-size: 14px;
+}
+.sub .sub-title-wrap .breadscrumbs li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  transform: rotate(135deg);
+  margin: 0 8px;
+}
+.sub .sub-title-wrap .breadscrumbs li:last-of-type {
+  font-weight: 700;
+}
+.sub .sub-title-wrap .breadscrumbs li:first-of-type {
+  font-family: "Roboto", sans-serif;
+}
+.sub .sub-mission .mission-list {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.sub .sub-mission .mission-list .mission-left {
+  min-width: 295px;
+  max-width: 295px;
+  margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.sub .sub-mission .mission-list .mission-left strong {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.sub .sub-mission .mission-list .mission-left figure {
+  margin-top: auto;
+}
+.sub .sub-mission .mission-list .mission-left figure img {
+  max-height: 125px;
+}
+.sub .sub-mission .mission-list .mission-right .mission-contents {
+  padding: 25px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  min-height: 350px;
+}
+.sub .sub-mission .mission-list .mission-right .mission-contents li {
+  flex: 1;
+}
+.sub .sub-mission .mission-list .mission-right .mission-contents li strong {
+  font-size: 20px;
+  margin-bottom: 25px;
+  display: block;
+  line-height: 1.3;
+}
+.sub .sub-mission .mission-list .mission-right .mission-contents li p {
+  font-size: 16px;
+  line-height: 1.3;
+}
+.sub .sub-mission .mission-list .mission-right .mission-contents li + li {
+  margin-left: 35px;
+}
+.sub .sub-program .program-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sub .sub-program .program-lists .program-list {
+  width: calc(33.3333333333% - 15px);
+  margin-bottom: 20px;
+}
+.sub .sub-program .program-lists .program-list:not(:nth-child(3n)) + .program-list {
+  margin-left: 20px;
+}
+.sub .comparison-lists .comparison-list {
+  position: relative;
+  padding-top: 95px;
+  margin-bottom: 100px;
+}
+.sub .comparison-lists .comparison-list .comparison-tit {
+  width: 85%;
+  padding: 26px 50px;
+  font-size: 30px;
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #F4F7FE;
+  color: #2464EB;
+}
+.sub .comparison-lists .comparison-list .comparison-content {
+  min-height: 440px;
+  padding-right: 612px;
+  display: flex;
+}
+.sub .comparison-lists .comparison-list .comparison-content > figure {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sub .comparison-lists .comparison-list .comparison-content > figure img {
+  max-height: 535px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons {
+  margin-top: 40px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon {
+  display: flex;
+  margin-bottom: 25px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon img {
+  max-height: 55px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon-lists {
+  margin-left: 30px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon-lists .comparison-procon-list {
+  font-size: 18px;
+  line-height: 1.3;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon-lists .comparison-procon-list::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.sub .comparison-lists .comparison-list:last-child .comparison-tit {
+  text-align: right;
+  left: unset;
+  right: 0;
+  background-color: #F7F5FE;
+  color: #5620A8;
+}
+.sub .comparison-lists .comparison-list:last-child .comparison-content {
+  flex-direction: row-reverse;
+  padding-right: 0;
+  padding-left: 612px;
+}
+.sub .comparison-lists .comparison-list:last-child .comparison-content > figure {
+  right: unset;
+  left: 0;
+  top: -20px;
+}
+
+@media (max-width: 1200px) {
+  .sub .sub-mission .mission-list .mission-left {
+    margin-right: 50px;
+    min-width: 250px;
+    max-width: 250px;
+  }
+  .sub .sub-mission .mission-list .mission-left strong {
+    font-size: 25px;
+  }
+  .sub .sub-mission .mission-list .mission-left figure img {
+    max-height: 100px;
+  }
+  .sub .comparison-lists .comparison-list {
+    padding-top: 75px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-tit {
+    padding: 20px 40px;
+    font-size: 25px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content {
+    padding-right: 500px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon-lists .comparison-procon-list {
+    font-size: 16px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content > figure img {
+    max-height: 435px;
+  }
+  .sub .comparison-lists .comparison-list:last-child .comparison-content {
+    padding-right: 0;
+    padding-left: 500px;
+  }
+}
+@media (max-width: 991px) {
+  .sub .sub-title-wrap h1 {
+    font-size: 35px;
+  }
+  .sub .sub-mission .mission-list {
+    display: block;
+  }
+  .sub .sub-mission .mission-list .mission-left {
+    margin-bottom: 20px;
+    margin-right: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+  .sub .sub-mission .mission-list .mission-left figure img {
+    max-height: 80px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-tit {
+    width: 100%;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content > figure {
+    position: static;
+    text-align: right;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content > figure img {
+    max-height: 645px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons {
+    display: flex;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon img {
+    max-height: 45px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon + .comparison-procon {
+    margin-left: 50px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon-lists {
+    margin-left: 20px;
+  }
+  .sub .comparison-lists .comparison-list:last-of-type .comparison-content > figure {
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  .sub {
+    padding: 50px 0;
+  }
+  .sub .sub-title-wrap {
+    margin-bottom: 50px;
+    display: block;
+  }
+  .sub .sub-title-wrap h1 {
+    font-size: 25px;
+  }
+  .sub .sub-title-wrap .breadscrumbs {
+    margin-top: 20px;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+  }
+  .sub .sub-title-wrap .breadscrumbs li {
+    font-size: 12px;
+  }
+  .sub .sub-mission .mission-list .mission-left strong {
+    font-size: 22px;
+  }
+  .sub .sub-mission .mission-list .mission-right .mission-contents {
+    display: block;
+  }
+  .sub .sub-mission .mission-list .mission-right .mission-contents li strong {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .sub .sub-mission .mission-list .mission-right .mission-contents li p {
+    font-size: 14px;
+  }
+  .sub .sub-mission .mission-list .mission-right .mission-contents li + li {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .sub .sub-program .program-lists .program-list {
+    margin-bottom: 10px;
+    width: calc(50% - 5px);
+  }
+  .sub .sub-program .program-lists .program-list img {
+    border-radius: 10px;
+  }
+  .sub .sub-program .program-lists .program-list strong {
+    font-size: 14px;
+    left: 15px;
+    bottom: 15px;
+  }
+  .sub .sub-program .program-lists .program-list:not(:nth-child(3n)) + .program-list {
+    margin-left: 0;
+  }
+  .sub .sub-program .program-lists .program-list:not(:nth-child(2n)) + .program-list {
+    margin-left: 10px;
+  }
+  .sub .comparison-lists .comparison-list {
+    margin-bottom: 50px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-tit {
+    padding: 20px;
+    font-size: 20px;
+    text-align: left !important;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons {
+    display: block;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon img {
+    max-height: 35px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon .comparison-procon-list {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon .comparison-procon-list::before {
+    top: 7px;
+  }
+  .sub .comparison-lists .comparison-list .comparison-content .comparison-procons .comparison-procon + .comparison-procon {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }/*# sourceMappingURL=app.css.map */
