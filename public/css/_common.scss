@@ -26,7 +26,7 @@ body, a{
 .inr{
     width: 100%;
     max-width: 1232px;
-    margin: 0 auto!important;
+    margin: 0 auto;
     padding: 0 16px;
     position: relative;
 }
@@ -37,7 +37,7 @@ body, a{
     display: block!important;
 }
 .font-bold{
-    font-weight: 600!important;
+    font-weight: 700!important;
 }
 .color-primary{
     color: $color-primary;
@@ -134,7 +134,21 @@ body, a{
         }
     }
 }
-
+.pc-hidden{
+    display: none;
+}
+.mg-0{
+    margin: 0!important;
+}
+.pb-0{
+    padding-bottom: 0!important;
+}
+.mg-b0{
+    margin-bottom: 0!important;
+}
+.mg-t0{
+    margin-top: 0!important;
+}
 // HEADER
 header{
     padding: 18px 0;
@@ -645,6 +659,12 @@ footer{
 }
 
 @media(max-width: 767px){
+    .mb-hidden{
+        display: none;
+    }
+    .pc-hidden{
+        display: block;
+    }
     .btn{
         &.type01{
             padding: 15px;

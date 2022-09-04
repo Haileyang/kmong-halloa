@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하올라 - 대표 한마디</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="public/css/app.css">
+    <script defer src="public/js/main.js"></script> 
+</head>
+
+<body>
+    <header id="header">
+        <div class="inr">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="gnb-lists">
+                    <li class="gnb-list">
+                        <span>하올라 소개</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="">대표 한마디</a></li>
+                            <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                    <li class="gnb-list">
+                        <span>하올라 프로그램</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                            <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                            <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                    <li class="gnb-list"><a href="">무료체험신청</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div class="login-status">
+                    <!-- <div class="before-login">
+                        <span class="btn fill">
+                            <a href="">로그인</a>
+                        </span>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="public/img/profile-default.png" alt="profile-default"></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile-btn" onclick="mobileOpen()">
+                    <img src="public/img/icon-hamberger.png" alt="mobile">
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu-open">
+            <div class="inr">
+                <div class="mobile-menu-profile">
+                    <!-- <figure><img src="public/img/profile-default.png" alt=""></figure> -->
+                    <div class="login-profile">
+                        <!-- <div class="before-login">로그인 및 회원가입</div> -->
+                        <div class="after-login">
+                            <span class="user-name">
+                                홍길동님!
+                                <div class="greeting">안녕하세요</div>
+                            </span>
+                            <span class="edit-profile"><a href="">프로필 변경</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-banner">
+                    하이브리드형 영어 교육 서비스, <span class="font-bold"> 하올라</span>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <strong>MENU</strong>
+                    <ul class="gnb-lists">
+                        <li class="gnb-list">
+                            <span>하올라 소개</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="">대표 한마디</a></li>
+                                <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                        <li class="gnb-list">
+                            <span>하올라 프로그램</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                                <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                                <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                        <li class="gnb-list"><a href="">무료체험신청</a></li>
+                    </ul>
+                </div>
+                <span class="logout">
+                    <a href="">
+                        <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                        로그아웃
+                    </a>
+                </span>
+            </div>
+            <span class="mobile-menu-dim"></span>
+            <span class="mobile-close" onclick="mobileClose()">
+                <img src="public/img/icon-close.png" alt="close">
+            </span>
+        </div>
+    </header>
+    <main id="main" class="sub pb-0">
+        <section class="sub-ceo">
+            <div class="inr">
+                <div class="sub-title-wrap">
+                    <h1>대표 한마디</h1>
+                    <ul class="breadscrumbs">
+                        <li class="breadscrumb">Home</li>
+                        <li class="breadscrumb">하올라 소개</li>
+                        <li class="breadscrumb">대표 한마디</li>
+                    </ul>
+                </div>
+            </div>
+            <article class="ceo-intro-content">
+                <section class="ceo-intro-section01 inr">
+                    <figure>
+                        <img src="public/img/img-ceo-sample.png" alt="ceo-sample">
+                        <caption>(공식 정부인가 IB 기반 국제학교 현직 교사 겸 대표)</caption>
+                    </figure>
+                    <div>
+                        <p>
+                            학생들의 <span class="font-bold">“지적 호기심과 자존감”</span>을 바탕으로 <span class="font-bold">“발표와 토론” 중심의 IB 기반 국제학교 
+                            커리큘럼은 창의력과 문제 해결 능력</span>을 키울 수 있는 교과 과정입니다. 교과서 없는 
+                            열린 교육을 추구하기에 학생들의 지적 호기심의 깊이 만큼, 그리고 이들의 자존감 크기 
+                            만큼 스스로 학습할 수 있는 기회가 펼쳐지기 때문에 많은 장점을 가지고 있죠. 
+                        </p>
+                        <p>
+                            <span class="font-bold">교육심리적 측면에서 학생들의 체면, 경쟁의식, 자존감을 십분 활용한 교육 시스템</span>이기 
+                            때문에, <span class="font-bold">학생들은 주체적으로, 분석적으로, 비판적으로 사고하며 스스로 문제해결 능력을 
+                            배양</span>할 수 있을 뿐만 아니라, 본인의 자존감을 높이고 지적호기심을 따라가며 지식의 깊이를 
+                            더하는 과정에서 자연스레 특정 지식에 대한 이해와 암기도 따라오게 되어 있는 것이죠.  
+                        </p>
+                    </div>
+                </section>
+                <section class="ceo-intro-section02">
+                    <div class="korea-system-benefit">
+                        <div class="inr">
+                            <div class="kr-benefit-left">
+                                <h2>
+                                    단점만 부각된 <br>
+                                    <span class="font-bold">한국 교육시스템의 장점?</span>
+                                </h2>
+                                <ul class="program-themes">
+                                    <li class="program-theme">
+                                        <figure><img src="public/img/icon-global-white.png" alt="icon-global"></figure>
+                                        <dl>
+                                            <dt>발표와 토론 중심 IB 기반 국제학교의 커리큘럼</dt>
+                                            <dd>창의력 & 문제해결능력 배양</dd>
+                                            <dd>
+                                                <ul class="theme-hashtags">
+                                                    <li class="theme-hashtag">지적호기심</li>
+                                                    <li class="theme-hashtag">자존감</li>
+                                                    <li class="theme-hashtag">체면</li>
+                                                    <li class="theme-hashtag">경쟁의식</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="program-theme">
+                                        <figure><img src="public/img/icon-korea-white.png" alt="icon-korea"></figure>
+                                        <dl>
+                                            <dt>한국식 경쟁 시스템과 영어교육 커리큘럼</dt>
+                                            <dd>최단시간, 최고 효율 학습</dd>
+                                            <dd>
+                                                <ul class="theme-hashtags">
+                                                    <li class="theme-hashtag">반복학습</li>
+                                                    <li class="theme-hashtag">오류제로</li>
+                                                    <li class="theme-hashtag">시험분석형</li>
+                                                    <li class="theme-hashtag">시험특화</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="kr-benefit-right">
+                                <p>
+                                    하지만 한국에 약 15년 정도 거주하며 제가 지켜본 한국식 교육 시스템과 비교했을 때, 
+                                    아무래도 강제성이 약해 느슨한 측면이 있어 지적호기심과 자존감이 낮은 학생들에게는 
+                                    큰 효과를 발휘하지 못하는 교육 시스템일 수도 있습니다. 많은 이들이 한국형 교육 방식의 단점을 토로하기도 하지만 제가 보았을 때는 그 한계점 이 면에 많은 장점을 가지고 있기도 합니다. 
+                                </p>
+                                <ul>
+                                    <li>
+                                        <small>1</small>
+                                        <span>
+                                            정해진 기간 내에 특정 학습량을 해가 넘어가기 전에 반드시 학습시키고, <span class="font-bold">선생님이나 강사가 
+                                            시험과 관련하여 중요한 핵심 포인트를 반복적으로 강조함으로써 학생들의 뇌리에 깊이 
+                                            지식을 암기시켜 단기적으로 높은 효과를 발휘</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <small>2</small>
+                                        <span>
+                                            단방향 수업 (특히, 인강이나 대형학원 등)일 수는 있지만
+                                            <span class="font-bold"> 가장 정확하고 오류가 없는 강의자가 학습 내용의 전체적인 맥락을 짧은 시간 내에 효율적으로 전달하기 때문에 짧은 순수 강의 
+                                            시간 안에서의 학습효율 측면에서는 전 세계 유수 교육시스템과 비교했을 때에도 전혀 손색이 없는 단연 독보적인 시스템</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <p>
+                                    (단, 수업 외적인 시간에서의 학습 효율은 학생마다 천차만별이고, 일반적으로 시간이 흐를수록 긴장감이 풀리고 학습의욕과 의지가 약해지기 때문에, 많은 학생들이 자기만의 학습 
+                                    시간을 비효율적으로 허비하는 경우가 많은 게 현실임)  게다가 전 세계적으로도 경쟁의식이 높기로 유명한 한국 학생들 간의 치열한 경쟁 시스템은 어찌 보면 앞서 IB 교육과정이 
+                                    근간으로 하고 있는 학생의 “자존감”과도 그 궤를 같이 하고 있습니다.   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section03 inr">
+                    <div class="eng-ceo-point">
+                        <figure><img src="public/img/icon-ceo-grey.png" alt="ceo-grey"></figure>
+                        <div>
+                            <p>하지만, 아직까지도 이러한 두 교육 시스템의 장점을 조화롭게 버무려서 효율적이고 효과적인 영어교육 프로그램을 제공하고 있는 학교나 사교육 기관이 많지 않은 것이 현실입니다. 많은 한국 학부모님들께서 <span class="font-bold">우리 아이를 국제학교에 보내야 할지 아니면 국내학교로 진학시켜야 할지를 고민하고</span>, 또 <span class="font-bold">어학원에 보내야 할지, 내신/문법 중심의 학원을 보내야 할지를 고민</span>하는 실상이 이를 여실히 보여주고 있습니다.  </p>
+                            <p>이것이 바로 하올라(Hybrid Online Live) 교육 프로그램이 탄생한 배경입니다. <span class="font-bold text-underline">당사는 발표와 토론 중심 IB 기반 국제학교의 커리큘럼 및 지도 방식과 한국식 경쟁시스템과 커리큘럼 및 지도방식의 장점들 만을 모아서, 한국 학생들에게 최적화된 교육 서비스를 제공하기 위해 노력</span>하고 있습니다.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section04 mg-b0">
+                    <div class="parent-concern">
+                        <div class="inr">
+                            <div class="parent-concern-left">
+                                <h2>
+                                    비효율적인 사교육 속<br>
+                                    <span class="font-bold">학부모와 학생의 고민은?</span>
+                                </h2>
+                                <p>고민의 선택을 한 번에 통합할 수는 없을까라는 질문은<br> 하올라(Hybrid Online Live) 교육 프로그램의 시작이 되었습니다.</p>
+                            </div>
+                            <div class="parent-concern-right">
+                                <figure><img src="public/img/img-comparison.png" alt="comparison"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section05 mg-0">
+                    <div class="rising-online-lecture">
+                        <div class="inr">
+                            <div class="online-lecture-left">
+                                <h2>
+                                    팬데믹으로 떠오른 <br>
+                                    <span class="font-bold">화상 온라인 수업방식??</span>
+                                </h2>
+                                <p>
+                                    덧붙여, 전 세계가 힘든 코로나 사태를 겪으며 교육계에서 화상 온라인 수업이 
+                                    시험 무대에 올랐고, 많은 학생들과 학부모들께서는 이러한 낯선 교육 방식에 의문을 품었지만, 
+                                    결과적으로 <span class="font-bold">화상 온라인 교육의 효과가 입증</span>이 되면서 현재 많은 교육기업들이 
+                                    본 시장에 뛰어 들었고, <span class="font-bold">온라인 수업을 통해 전국의 수많은 학생들이 수도권 지역에 거주하고 있는 
+                                    실력파 강사들의 수업을 받을 기회</span>를 얻게 되었습니다. 
+                                </p>
+                                <p>
+                                    시간이 흐르면 흐를수록 지역 간, 계층 간 학생들의 영어 수준이 날로 벌어지고 있는 현 시점에서, 
+                                    전국의 학생들을 대상으로 <span class="font-bold">저렴하면서도 양질의 서비스를 제공</span>하고 있는 당사의 온라인 교육
+                                    서비스가 한줄기 빛이 되어 이러한 <span class="font-bold">양극화 현상을 줄이는데 큰 힘이 되었으면 하는 바람</span>입니다. 
+                                </p>
+                            </div>
+                            <div class="online-lecture-right">
+                                <figure><img src="public/img/img-online-lecture.jpg" alt="img-online-lecture"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        
+        </section>
+    </main>
+    <footer>
+        <div class="inr">
+            <div class="footer-top">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo-f.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="footer-sns-lists">
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-twitter.png" alt="twitter"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-facebook.png" alt="facebook"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-insta.png" alt="insta"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <ul>
+                        <li>사업자 등록번호 : 393-02-01792</li>
+                        <li>주소 : 경기도 고양시 덕양구 항기로 77, 410동 2201호 </li>
+                        <br>
+                        <li>공동대표 : Nicole leigh nel, 강병조 </li>
+                        <li>개인정보 책임자 : 강병조 </li>
+                        <br>
+                        <li>이메일 : joe@haolla.net </li>
+                        <li>전화 : 1533-3842 </li>
+                    </ul>
+                    <p class="copy">ⓒ 2022 Haolla hybrid online live, inc. all rights reserved</p>    
+                </div>
+                <div class="footer-right">
+                    <strong>1688-4147</strong>
+                    <p>상담 : 오전 9시 ~ 오후 6시 (토요일/공휴일 휴무)<br>점심 : 오후 12시 ~ 오후 1시</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+</html>

@@ -101,57 +101,7 @@
         }
         margin-right: 30px;
     }
-    .program-theme{
-        display: flex;
-        align-items: center;
-        padding: 38px 50px;
-        box-shadow: 0px 4px 26px rgba(36, 100, 235, 0.1);
-        border-radius: 20px;
-        background-color: #fff;
-        img{
-            max-height: 101px;
-        }
-        dl{
-            margin-left: 35px;
-        }
-        dt{
-            font-size: 14px;
-            color: #888;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-        dd{
-            font-size: 22px;
-            font-weight: 500;
-        }
-        .theme-hashtags{
-            margin-top: 10px;
-            display: flex;
-            li{
-                font-size: 14px;
-                padding : 3px 10px;
-                border: 1px solid #000;
-                border-radius: 30px;
-                margin-right: 5px;
-                white-space: nowrap;
-            }
-        }
-        &:first-child{
-            .theme-hashtag{
-                color: $color-primary;
-                border-color: $color-primary;
-            }
-        }
-        &:last-child{
-            .theme-hashtag{
-                color: $color-secondary;
-                border-color: $color-secondary;
-            }
-        }
-        & + .program-theme{
-            margin-top: 25px;
-        }
-    }
+    
     .about-bg{
         position: absolute;
         left: 0; bottom: 135px;
@@ -161,6 +111,57 @@
         font-weight: 800;
         white-space: nowrap;
         z-index: -1;
+    }
+}
+.program-theme{
+    display: flex;
+    align-items: center;
+    padding: 38px 50px;
+    box-shadow: 0px 4px 26px rgba(36, 100, 235, 0.1);
+    border-radius: 20px;
+    background-color: #fff;
+    img{
+        max-height: 101px;
+    }
+    dl{
+        margin-left: 35px;
+    }
+    dt{
+        font-size: 14px;
+        color: #888;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    dd{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .theme-hashtags{
+        margin-top: 10px;
+        display: flex;
+        li{
+            font-size: 14px;
+            padding : 3px 10px;
+            border: 1px solid #000;
+            border-radius: 30px;
+            margin-right: 5px;
+            white-space: nowrap;
+        }
+    }
+    &:first-child{
+        .theme-hashtag{
+            color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+    &:last-child{
+        .theme-hashtag{
+            color: $color-secondary;
+            border-color: $color-secondary;
+        }
+    }
+    & + .program-theme{
+        margin-top: 25px;
     }
 }
 .main-curriculum{
@@ -795,15 +796,16 @@
     }
     .main-about{
         padding : 80px 0 200px;
-        .program-theme {
-            padding: 35px;
-            img{
-                max-height: 85px;
-            }
-        }
+        
         .about-bg{
             bottom: 100px;
             font-size: 150px;
+        }
+    }
+    .program-theme {
+        padding: 35px;
+        img{
+            max-height: 85px;
         }
     }
     .main-curriculum {
@@ -1138,25 +1140,26 @@
                 font-size: 16px;
             }
         }
-        .program-theme{
-            display: block;
-            padding: 25px;
-            img{
-                max-height: 60px;
-            }
-            dl{
-                margin-left: 0; margin-top: 10px;
-            }
-            dt{
-                font-size: 14px;
-            }
-            dd{
-                font-size: 20px;
-            }
-            .theme-hashtags {
-                li{
-                    font-size: 12px;
-                }
+    }
+    .program-theme{
+        display: block;
+        padding: 25px;
+        img{
+            max-height: 60px;
+        }
+        dl{
+            margin-left: 0; margin-top: 10px;
+        }
+        dt{
+            font-size: 14px;
+        }
+        dd{
+            font-size: 20px;
+        }
+        .theme-hashtags {
+            li{
+                font-size: 12px;
+                padding: 3px 6px;
             }
         }
     }

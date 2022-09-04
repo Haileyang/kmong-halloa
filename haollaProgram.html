@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하올라 - 하올라프로그램</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="public/css/app.css">
+    <script defer src="public/js/main.js"></script> 
+</head>
+
+<body>
+    <header id="header">
+        <div class="inr">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="gnb-lists">
+                    <li class="gnb-list">
+                        <span>하올라 소개</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="">대표 한마디</a></li>
+                            <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                    <li class="gnb-list">
+                        <span>하올라 프로그램</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                            <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                            <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                    <li class="gnb-list"><a href="">무료체험신청</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div class="login-status">
+                    <!-- <div class="before-login">
+                        <span class="btn fill">
+                            <a href="">로그인</a>
+                        </span>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="public/img/profile-default.png" alt="profile-default"></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile-btn" onclick="mobileOpen()">
+                    <img src="public/img/icon-hamberger.png" alt="mobile">
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu-open">
+            <div class="inr">
+                <div class="mobile-menu-profile">
+                    <!-- <figure><img src="public/img/profile-default.png" alt=""></figure> -->
+                    <div class="login-profile">
+                        <!-- <div class="before-login">로그인 및 회원가입</div> -->
+                        <div class="after-login">
+                            <span class="user-name">
+                                홍길동님!
+                                <div class="greeting">안녕하세요</div>
+                            </span>
+                            <span class="edit-profile"><a href="">프로필 변경</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-banner">
+                    하이브리드형 영어 교육 서비스, <span class="font-bold"> 하올라</span>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <strong>MENU</strong>
+                    <ul class="gnb-lists">
+                        <li class="gnb-list">
+                            <span>하올라 소개</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="">대표 한마디</a></li>
+                                <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                        <li class="gnb-list">
+                            <span>하올라 프로그램</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                                <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                                <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                        <li class="gnb-list"><a href="">무료체험신청</a></li>
+                    </ul>
+                </div>
+                <span class="logout">
+                    <a href="">
+                        <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                        로그아웃
+                    </a>
+                </span>
+            </div>
+            <span class="mobile-menu-dim"></span>
+            <span class="mobile-close" onclick="mobileClose()">
+                <img src="public/img/icon-close.png" alt="close">
+            </span>
+        </div>
+    </header>
+    <main id="main" class="sub">
+        <section class="sub-haollaProgram">
+            <div class="inr">
+                <div class="sub-title-wrap">
+                    <h1>하올라프로그램</h1>
+                    <ul class="breadscrumbs">
+                        <li class="breadscrumb">Home</li>
+                        <li class="breadscrumb">하올라프로그램</li>
+                    </ul>
+                </div>
+            </div>
+            <article class="haolla-program-content">
+                <section class="haolla-program-section01">
+                    <figure><img src="public/img/img-haolla-program.jpg" alt="haolla-program"></figure>
+                    <div class="hp-section01-txt">
+                        <h2>
+                            하올라만의 <span class="font-bold">국내, 국제 통합교육 시스템</span>과<br>
+                            장점을 두배로 올린 <span class="font-bold">소규모 그룹 화상수업</span>의 효과!!
+                        </h2>
+                        <ul class="program-themes">
+                            <li class="program-theme">
+                                <figure><img src="public/img/icon-global-white.png" alt="icon-global"></figure>
+                                <dl>
+                                    <dt>발표와 토론 중심 IB 기반 국제학교의 커리큘럼</dt>
+                                    <dd>창의력 & 문제해결능력 배양</dd>
+                                    <dd>
+                                        <ul class="theme-hashtags">
+                                            <li class="theme-hashtag">지적호기심</li>
+                                            <li class="theme-hashtag">자존감</li>
+                                            <li class="theme-hashtag">체면</li>
+                                            <li class="theme-hashtag">경쟁의식</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="program-theme">
+                                <figure><img src="public/img/icon-korea-white.png" alt="icon-korea"></figure>
+                                <dl>
+                                    <dt>한국식 경쟁 시스템과 영어교육 커리큘럼</dt>
+                                    <dd>최단시간, 최고 효율 학습</dd>
+                                    <dd>
+                                        <ul class="theme-hashtags">
+                                            <li class="theme-hashtag">반복학습</li>
+                                            <li class="theme-hashtag">오류제로</li>
+                                            <li class="theme-hashtag">시험분석형</li>
+                                            <li class="theme-hashtag">시험특화</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="haolla-program-section02 inr">
+                    <p>
+                        "발표와 토론 중심 IB 기반 국제학교의 커리큘럼 및 지도 방식”과 “한국식 경쟁 시스템과 영어교육 커리큘럼 및 지도방식”을 적절히 
+                        접목한 방식의 영어교육 프로그램을 개인 및 각 소규모 그룹별 니즈에 맞춰 제공하는 맞춤형 화상 영어교육 서비스입니다. 
+                    </p>
+                    <p>
+                        학생들이 영어의 전 영역(스피킹/라이팅/리딩/리스닝/문법/어휘)을 유기적으로 그리고 통합적으로 학습할 수 있는 기회와 학습 구조를 제공하여 
+                        진정한 언어 능력을 끌어 올릴 뿐만 아니라, 동시에 소규모 그룹수업에서의 발표와 토론 과정 그리고 이를 준비하는 과정에서, 학생 스스로 
+                        주체적으로 분석하고 문제를 해결할 수 있는 비판적 사고를 배양하게끔 하여 진정한 배움의 진가와 즐거움을 만끽하게 돕습니다.   
+                    </p>
+                    <p>
+                        이를 통해 향후 수능 영어 모의고사나 해외대학 입학시험에서 고난이도 문제를 쉽게 해결할 수 있는 역량을 자연스럽게 익힐 수 있게 설계된 
+                        “비판적 사고 배양형 통합영어교육 프로그램”입니다.  
+                    </p>
+                </section>
+                <section class="haolla-program-section03">
+                    <figure class="mb-hidden"><img src="public/img/img-haollaProgram-banner01.png" alt="haollaProgram-banner01"></figure>
+                    <figure class="pc-hidden"><img src="public/img/img-haollaProgram-banner01-mb.png" alt="haollaProgram-banner01"></figure>
+                </section>
+                <section class="haolla-program-section04 inr">
+                    <figure class="mb-hidden"><img src="public/img/img-haollaProgram-banner02.png" alt="haollaProgram-banner02"></figure>
+                    <figure class="pc-hidden"><img src="public/img/img-haollaProgram-banner02-mb.png" alt="haollaProgram-banner02"></figure>
+                    <p>
+                        소규모 그룹원들의 관심사와 의지, 열정을 적극 반영하여 이들과의 합의와 약속 하에서만 학습 플랜과 진도를 결정하기 때문에, 
+                        공동의 목표를 향해 나아가는 도전 정신과 지적호기심을 최대한 증폭시키는 장점이 있음
+                    </p>
+                    <p>
+                        학생들의 경쟁의식, 자존감, 체면과 같은 교육심리적인 부분을 십분 활용해 학습 효과 극대화
+                    </p>
+                    <p>
+                        때로는 한국형 교육방식을 적용해 선생님이 일타강사로 변신하여 각 소그룹별 니즈에 따라 혹은 특정 시즌에 따라 특정 시험(내신/모의고사/수능 등) 준비, 문법 및 구문 분석 등의 강의를 진행하고 있습니다. 전체적으로 맥을 짚어 주고 시험에 나올만한 부분과 핵심 포인트를 반복적으로 강조하여  
+                        암기시키는 방법이 단기적으로는 효과가 크기 때문에 이를 적절히 잘 혼용하여 구사하는 것이 하올라 교육전략의 핵심
+                    </p>
+                </section>
+            </article>
+    
+        </section>
+    </main>
+    <footer>
+        <div class="inr">
+            <div class="footer-top">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo-f.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="footer-sns-lists">
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-twitter.png" alt="twitter"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-facebook.png" alt="facebook"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-insta.png" alt="insta"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <ul>
+                        <li>사업자 등록번호 : 393-02-01792</li>
+                        <li>주소 : 경기도 고양시 덕양구 항기로 77, 410동 2201호 </li>
+                        <br>
+                        <li>공동대표 : Nicole leigh nel, 강병조 </li>
+                        <li>개인정보 책임자 : 강병조 </li>
+                        <br>
+                        <li>이메일 : joe@haolla.net </li>
+                        <li>전화 : 1533-3842 </li>
+                    </ul>
+                    <p class="copy">ⓒ 2022 Haolla hybrid online live, inc. all rights reserved</p>    
+                </div>
+                <div class="footer-right">
+                    <strong>1688-4147</strong>
+                    <p>상담 : 오전 9시 ~ 오후 6시 (토요일/공휴일 휴무)<br>점심 : 오후 12시 ~ 오후 1시</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하올라 - 한국인 대표의 고백</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="public/css/app.css">
+    <script defer src="public/js/main.js"></script> 
+</head>
+
+<body>
+    <header id="header">
+        <div class="inr">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="gnb-lists">
+                    <li class="gnb-list">
+                        <span>하올라 소개</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="">대표 한마디</a></li>
+                            <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                    <li class="gnb-list">
+                        <span>하올라 프로그램</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                            <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                            <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                    <li class="gnb-list"><a href="">무료체험신청</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div class="login-status">
+                    <!-- <div class="before-login">
+                        <span class="btn fill">
+                            <a href="">로그인</a>
+                        </span>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="public/img/profile-default.png" alt="profile-default"></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile-btn" onclick="mobileOpen()">
+                    <img src="public/img/icon-hamberger.png" alt="mobile">
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu-open">
+            <div class="inr">
+                <div class="mobile-menu-profile">
+                    <!-- <figure><img src="public/img/profile-default.png" alt=""></figure> -->
+                    <div class="login-profile">
+                        <!-- <div class="before-login">로그인 및 회원가입</div> -->
+                        <div class="after-login">
+                            <span class="user-name">
+                                홍길동님!
+                                <div class="greeting">안녕하세요</div>
+                            </span>
+                            <span class="edit-profile"><a href="">프로필 변경</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-banner">
+                    하이브리드형 영어 교육 서비스, <span class="font-bold"> 하올라</span>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <strong>MENU</strong>
+                    <ul class="gnb-lists">
+                        <li class="gnb-list">
+                            <span>하올라 소개</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="">대표 한마디</a></li>
+                                <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">한국인 대표의 고백</a></li>
+                        <li class="gnb-list">
+                            <span>하올라 프로그램</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                                <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                                <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                        <li class="gnb-list"><a href="">무료체험신청</a></li>
+                    </ul>
+                </div>
+                <span class="logout">
+                    <a href="">
+                        <figure><img src="public/img/icon-logout.png" alt="logout"></figure>
+                        로그아웃
+                    </a>
+                </span>
+            </div>
+            <span class="mobile-menu-dim"></span>
+            <span class="mobile-close" onclick="mobileClose()">
+                <img src="public/img/icon-close.png" alt="close">
+            </span>
+        </div>
+    </header>
+    <main id="main" class="sub">
+        <section class="sub-ceo-kr sub-ceo">
+            <div class="inr">
+                <div class="sub-title-wrap">
+                    <h1>한국인 대표의 고백</h1>
+                    <ul class="breadscrumbs">
+                        <li class="breadscrumb">Home</li>
+                        <li class="breadscrumb">한국인 대표의 고백</li>
+                    </ul>
+                </div>
+            </div>
+            <article class="ceo-intro-content">
+                <section class="ceo-intro-section01 inr">
+                    <figure>
+                        <img src="public/img/img-ceo-sample.png" alt="ceo-sample">
+                        <caption>(공식 정부인가 IB 기반 국제학교 현직 교사 겸 대표)</caption>
+                    </figure>
+                    <div>
+                        <p>
+                            영어교육 경력 10년 이상 끝에 고백 아닌 고백을 해봅니다. 저는 진심으로 소규모 그룹(2인/3인) 수업이 개인과외 수업보다 훨씬 더 효과적이라고 단언합니다. 단지 학생들을 그룹으로 형성해 
+                            지도하며 제가 사욕을 채우려는 것이 아니라, 학생과 학부모님께 죄송스럽고, 제 스스로도 자괴감이 들기 때문에 이렇게 저의 솔직한 의견을 표출하게 되었습니다. 
+                        </p>
+                        <p>
+                            훨씬 더 빠르고 효율적으로 그리고 아주 압축적으로 상당히 방대한 학습양을 더욱 즐겁게 
+                            학생들이 공부할 수 있다는 것을 알면서도, 단지 한 아이를 위해 그 한계점을 뻔히 알면서도…
+                            고액과외비를 받으며 효과가 상대적으로 적은 개인과외를 하는 것은 저를 고민에 빠뜨리게 
+                            만듭니다. 
+                        </p>
+                    </div>
+                </section>
+                <section class="ceo-intro-section02 inr">
+                    <h2>하올라 한국인 대표가 생각하는 <span class="font-bold"> 개인과외의 단점과 소규모 그룹의 효과!!</span></h2>
+                    <div class="small-group-benefit">
+                        <div class="small-group-benefit01">
+                            <div>
+                                <p>
+                                    개인과외를 많이 진행해 보신 분들은 깊게 동감하시는 부분이 있습니다. 
+                                    시간이 흐를수록 수업이 루즈해지고 학생은 과제를 하지 않고… 
+                                    이는 바로 학생이 선생님이 점점 더 편해져서 이기도 하고, 
+                                    또 선생님 앞에서 자존심, 체면, 경쟁의식을 느끼지 않기 때문에 
+                                    일어나는 현상입니다.
+                                </p>
+                                <p>
+                                    (과제 완성도 하락 > 선생님 잔소리 > 관계 깨짐 > 학생/선생님 모두 
+                                    동기하락 > 효과 없는 수업으로 과외 종료 또는 새로운 과외 선생님 구함 -
+                                    상기 악순환 고리는 반복되어 나타남) 
+                                </p>
+                            </div>
+                            <figure><img src="public/img/img-graph.jpg" alt="graph"></figure>
+                        </div>
+                        <div class="small-group-benefit02">
+                            <figure><img src="public/img/img-alternative.jpg" alt="alternative"></figure>
+                            <div>
+                                <p>
+                                    이를 보완할 방법으로, 수준에 맞는 학생들을 2인 또는 3인의 그룹지도를 통해 각 학생별로 원서를 읽어 발표/토론하고, 문법 공부를 직접 예습해서 설명을 시키고, 자유 주제 발표 및 토론 내용을 준비하고, 단어를 
+                                    암기시키고, 틀린 문제를 스스로 분석해 표현해보는 방식 등을 적용해 
+                                    본다면, 수업 시간 중 일어나는 잠깐의 순간을 위해서 가정에서 
+                                    자발적으로 동기부여 되어 오랜 시간 열공하는 자녀의 모습이 가히 
+                                    상상이 가지 않으신가요? 
+                                </p>
+                                <p>
+                                    데드라인이 있기 때문에 긴장감을 갖고 압축적으로 빈번히 공부하고, 
+                                    또 쉴 때는 뿌듯하게 마음 편히 놀고 쉬는 전략이죠. 원래 공부 잘하는 
+                                    아이들이 더 잘 놀고 시험도 잘 보는 이유가 이러한 부분과 연관 되어 
+                                    있습니다. 혼자서는 고독하고 힘겹고 시간이 흐를수록 약해지는 의지 
+                                    때문에, 개인과외나 독학은 결국 학습효율과 효과가 모두 자연스럽게 떨어지기 마련입니다. 따라서 불가피하게 학생이 개인과외로 공부를 시작하더라도, 추후 그룹수업으로 전환하여 수업을 이어 가는 것도 좋은 대안이 될 수 있습니다. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="small-group-benefit03">
+                            <p>
+                                단순 암기도 혼자서 같은 내용을 여러번 반복하는 것도 중요하지만, 효율성 측면에서는 학생 본인이 선생님의 관점에서 직접 발표나 설명을 위해 동일한 내용을 공부하는 것이 같은 시간투자 대비 더 우수한 효과를 보여준다는 것을 경험해보신 분들이라면 잘 아실 거라 믿습니다. 이게 바로 제가 그룹스터디 방식을 이용해 많은 이들이 공부를 못하는 전공자로 치부하는 체육교육과 학생이었던 제가 단 시간에 미국로스쿨에 도전도 할 수 있게 해준 원동력이었고, 또 당당하게 국내 로스쿨 수석입학의 영예를 안겨준 비결이기도 합니다. - 당시 재정적 문제로 고향인 국내로스쿨 입학으로 
+                                전향하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section03">
+                    <div class="ceo-kr-quote">
+                        <div class="inr">
+                            <div class="quote-txt">
+                                <strong>인간은 사회적 동물입니다. </strong>
+                                <p>
+                                    아이들도 함께 공부할 때 더 힘이 나고 즐거운 법입니다. <br>
+                                    때로는 체면도 구기고, 자존심도 상하고, 경쟁에 지칠 때도 있지만 바로 이러한 부분들을 <br>
+                                    내적으로 이겨내는 과정에서 성장하고 보람도 있고…
+                                </p>
+                                <b> 한마디로 빡세지만 알차고 기분 좋고 자신감도 얻는 기분(자기효능감)을 느끼게 되는 것이죠. </b>
+                            </div>
+                            <figure><img src="public/img/img-ceo-kr.png" alt="ceo-kr"></figure>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section04 inr">
+                    <div class="group-study-exp">
+                        <div class="experiment-swiper">
+                            <div class="swiper-container">
+                                <h2>
+                                    그룹 스터디가 효과적인 이유!<br>
+                                    <span class="font-bold">미국 플로리다 주립대학 연구 결과</span>
+                                </h2>
+                                <div class="swiper-navigation-wrap">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="experiment-content">
+                                            <figure><img src="public/img/img-exp01.png" alt="exp01"></figure>
+                                            <dl>
+                                                <dt>학습 내용을 더 깊이 이해</dt>
+                                                <dd>Comprehension</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="experiment-content">
+                                            <figure><img src="public/img/img-exp02.png" alt="exp02"></figure>
+                                            <dl>
+                                                <dt>더 나은 성적 결과</dt>
+                                                <dd>Better Outcome</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="experiment-content">
+                                            <figure><img src="public/img/img-exp03.png" alt="exp03"></figure>
+                                            <dl>
+                                                <dt>다양한 관점 경험 및 학습</dt>
+                                                <dd>Diverse Aspects</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="experiment-content">
+                                            <figure><img src="public/img/img-exp04.png" alt="exp04"></figure>
+                                            <dl>
+                                                <dt>균형 잡힌 통찰력 형성</dt>
+                                                <dd>Balanced Insight</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="experiment-content">
+                                            <figure><img src="public/img/img-exp05.png" alt="exp05"></figure>
+                                            <dl>
+                                                <dt>개인의 책임감 증대</dt>
+                                                <dd>High Responsibility</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-study-desc">
+                            <p>
+                                오래 전부터 주요학군지나 각 지역에서는 능력 있는 선생님을 필두로 하여 이러한 소규모 그룹스터디를 진행하여 많은 학생들을 성공적으로 특목고나 명문대에 진학시켜 왔습니다. 많은 저명한 세계 교육학자들도 소규모그룹 지도가 개인 지도보다 더 효과가 있다는 논문을 오래 전부터 발표해 왔을 뿐만 아니라, 알만한 학부모님들은 다 익히 잘 인지하고 있는 전략이라서, 본인의 자녀가 좋은 선생님 밑에서 실력 있는 친구들이 공부하는 그룹에 들어갈 수 있도록 갖은 노력을 하는 경우가 많습니다. 대부분 불법 고액과외로 진행되는 경우가 많은데 저는 이를 양성화하여 저렴하면서도 질 좋은 교육을 추구하고 있습니다. 
+                                <br>
+                                앞서 말한대로 국제학교식 발표와 토론 수업에, 때로는 (특히 시험 준비나 문법강의를 위해서) 선생님이 일타강사로 변신하여 맥을 짚어주고 핵심포인트를 반복적으로 강조하는 주입식 교육이 단기적으로 잘 먹히기 때문에 이를 적절히 잘 혼용하여 구사하는 것이 제 교육전략의 핵심입니다. 
+                            </p>
+                            <figure><img src="public/img/img-exp.png" alt="exp"></figure>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section05">
+                    <div class="two-rabbits-content">
+                        <div class="inr">
+                            <h2>
+                                하올라의 통합형 영어 교육<br>
+                                <span class="font-bold">수능부터 해외대학까지 두마리의 토끼를 잡다!</span>
+                            </h2>
+                            <figure class="mb-hidden"><img src="public/img/img-tworabbit-banner.png" alt="tworabbit"></figure>
+                            <figure class="pc-hidden"><img src="public/img/img-tworabbit-banner-mb.png" alt="tworabbit"></figure>
+                            <div>
+                                <p>
+                                    현재 제가 바로 이러한 2인 또는 3인 이하의 소규모 그룹을 몇 개 맡고 있고, 그룹 내 우리 학생들도 함께 미래를 향해 달려 나아갈 동반자를 찾고 있습니다. 혹시 이에 관심이 있으시다면 언제든 편히 연락주시면 친절히 자세한 상담을 진행해 드리겠습니다. 감사합니다. 
+                                </p>
+                                <p>
+                                    (P.S. 제가 오랜 시간 학생들을 지도해보니, 단순히 영어만 잘한다고 수능모의고사 1등급이나 해외대학입학시험 고득점이 보장되지 않습니다. 단순히 문법, 어휘 학습을 많이 하고, 인강이나 대형학원 수업을 오래 받고, 문제풀이만 많이 한다고 해서도 고득점은 보장되지 않습니다. 영어의 전 영역(문법/리딩/리스닝/스피킹/라이팅/어휘)를 어려서부터 통합적으로 유기적으로 공부하면서 진정한 언어 능력을 끌어 올림과 동시에, 스스로 주체적으로 분석하고 문제를 해결할 수 있는 비판적 사고를 배양해야만 배움의 진가와 즐거움을 만끽하게 되고 또 최상의 효율, 효과 모두를 다 달성할 수 있습니다. 더이상 어학원이냐 문법/내신 위주의 학원이냐를 고민하지 마십시오. 이제 시대 흐름은 바야흐로 비판적 사고를 배양하는 통합형 영어교육으로 이미 진입하였습니다.)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ceo-intro-section06 inr">
+                    <h2>
+                        대표의
+                        <span class="font-bold">발자취/이력</span>
+                    </h2>
+                    <ul class="ceo-kr-history-lists">
+                        <li class="ceo-kr-history-list point">청담러닝(청담어학원 본사) 해외전략실 출신</li>
+                        <li class="ceo-kr-history-list">️고려대 체육교육학/경영학 전공(90% 이상 영어강의 수강)</li>
+                        <li class="ceo-kr-history-list">영어점수 이력: 토익 – 985 / 토플 - 117</li>
+                        <li class="ceo-kr-history-list point">️제주(고향)대학교 로스쿨 수석입학</li>
+                        <li class="ceo-kr-history-list point">️미래에셋 해외교환장학생 선정</li>
+                        <li class="ceo-kr-history-list">캐나다 동부 MSVU 교환학생</li>
+                        <li class="ceo-kr-history-list point">수능영어/중등영어/초등영어 10년 이상의 경력 (정교사 자격증 소지)</li>
+                        <li class="ceo-kr-history-list point">해외대학 및 국내유수 대학 입학자 지도 경험</li>
+                        <li class="ceo-kr-history-list point">일반 초중고 및 국내외 국제학교 학생들을 포함해 개인 및 <br> 소규모(2-3인) 화상 그룹지도 중</li>
+                        <li class="ceo-kr-history-list">️고려대학교 신문사 기자 출신 </li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="inr">
+            <div class="footer-top">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="public/img/logo-f.png" alt="logo"></figure>
+                    </a>
+                </div>
+                <ul class="footer-sns-lists">
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-twitter.png" alt="twitter"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-facebook.png" alt="facebook"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="public/img/icon-insta.png" alt="insta"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <ul>
+                        <li>사업자 등록번호 : 393-02-01792</li>
+                        <li>주소 : 경기도 고양시 덕양구 항기로 77, 410동 2201호 </li>
+                        <br>
+                        <li>공동대표 : Nicole leigh nel, 강병조 </li>
+                        <li>개인정보 책임자 : 강병조 </li>
+                        <br>
+                        <li>이메일 : joe@haolla.net </li>
+                        <li>전화 : 1533-3842 </li>
+                    </ul>
+                    <p class="copy">ⓒ 2022 Haolla hybrid online live, inc. all rights reserved</p>    
+                </div>
+                <div class="footer-right">
+                    <strong>1688-4147</strong>
+                    <p>상담 : 오전 9시 ~ 오후 6시 (토요일/공휴일 휴무)<br>점심 : 오후 12시 ~ 오후 1시</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <script>
+        const experimentSwiper = new Swiper ('.experiment-swiper .swiper-container', {
+            loop: true,
+            slidesPerView: 5,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3000,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+                1000: {
+                    slidesPerView:4,
+                    spaceBetween: 20,
+                },
+                800: {
+                    slidesPerView:3.5,
+                    spaceBetween: 20,
+                },
+                600: {
+                    slidesPerView:3,
+                    spaceBetween: 20,
+                },
+                400: {
+                    slidesPerView:2,
+                    spaceBetween: 10,
+                },
+            }
+        })
+   </script>
+</body>
+
+</html>

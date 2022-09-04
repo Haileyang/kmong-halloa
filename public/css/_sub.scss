@@ -1,5 +1,30 @@
 .sub{
     padding: 80px 0;
+    h2{
+        font-size: 30px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    article{
+        section{
+            margin-bottom: 80px;
+            &:not(:first-child){
+                margin-top: 80px;
+            }
+            img{
+                max-width: 100%;
+                object-fit: contain;
+            }
+            p{
+                font-size: 20px;
+                line-height: 1.5;
+                & + p{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
     .sub-title-wrap{
         display: flex;
         justify-content: space-between;
@@ -175,6 +200,386 @@
             }
         }
     }
+    .sub-haollaProgram{
+        .haolla-program-content{
+            .haolla-program-section01{
+                display: flex;align-items: center;
+                .hp-section01-txt{
+                    width: 55%;
+                }
+                >figure{
+                    width: 55%;
+                    position: relative;
+                    &::after{
+                        content:"";
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(277.99deg, #FFFFFF 15.27%, rgba(255, 255, 255, 0) 19.78%);
+                        position: absolute;
+                        left: 0; top: 0;
+                    }
+                    img{
+                        width: 100%;
+                        max-height: 469px;
+                        min-height: 430px;
+                        object-fit: cover;
+                    }
+                }
+               
+            }
+            .haolla-program-section03{
+                display: flex; justify-content: center;
+                padding: 50px 0;
+                background-color: #F4F7FE;
+                img{
+                    max-height: 310px;
+                }
+            }
+            .haolla-program-section04{
+                img{
+                    max-height: 97px;
+                }
+                figure{
+                    margin-bottom: 100px;
+                }
+            }
+        }
+       
+    }
+    .program-theme{
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        align-items: center;
+        figure{
+            min-width: 66px;min-height: 66px;
+            width: 66px;height: 66px;
+            border-radius: 10px;
+            background-color: #ccc;
+            display: flex;justify-content: center; align-items: center;
+            img{
+                width: 43px;
+                height: 43px;
+            }
+        }
+        dl{
+            margin-left: 30px;
+        }
+        &:first-child{
+            figure{
+                background-color: $color-primary;
+            }
+        }
+        &:last-child{
+            figure{
+                background-color: $color-secondary;
+            }
+        }
+        & + .program-theme{
+            margin-top: 50px;
+        }
+    }
+    .sub-ceo{
+        .ceo-intro-section01{
+            display: flex;
+            align-items: center;
+            figure{
+                min-width: 355px;
+                margin-right: 50px;
+            }
+            img{
+                max-height: 328px;
+            }
+        }
+        .ceo-intro-section02{
+            .korea-system-benefit{
+                padding: 60px 0;
+                background-color: #F4F7FE;
+            }
+            .kr-benefit-right{
+                position: absolute;
+                right: 16px;top: -100px;
+                border-radius: 20px;
+                background: #fff;
+                padding : 60px 40px 95px;
+                max-width: 835px;
+                box-shadow: 0px 0px 48px 10px rgba(36, 100, 235, 0.1);
+                ul{
+                    margin: 30px 0;
+                    li{
+                        font-size: 18px;
+                        line-height: 1.5;
+                        display: flex;
+                        align-items: flex-start;
+                        small{
+                            width: 33px;
+                            min-width: 33px;
+                            height: 33px;
+                            min-height: 33px;
+                            border-radius:5px ;
+                            background-color: $color-secondary;
+                            font-size: 16px;
+                            font-weight: 700;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                            margin-right: 20px;
+                        }
+                        & + li{
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+            .inr{
+                display: flex;
+            }
+            .program-theme{
+                display: block;
+                dl{
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .ceo-intro-section03{
+            .eng-ceo-point{
+                display: flex;
+                img{
+                    width: 63px;
+                    height: 63px;
+                }
+                figure{
+                    margin-right: 20px;
+                }
+            }
+        }
+        .ceo-intro-section04{
+            .parent-concern{
+                background-color: #F7F5FE;
+                padding: 35px 0;
+                .inr{
+                    display: flex;
+                    align-items: center;
+                    >div{
+                        flex: 1 50%;
+                    }
+                    img{
+                        width: 100%;
+                        max-height: 260px;
+                    }
+                }
+                .parent-concern-left{
+                    h2{
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        line-height: 1.5;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .ceo-intro-section05{
+            .rising-online-lecture{
+                padding : 85px 0;
+                background: url(/public/img/online-lecture-bg.jpg) no-repeat center / cover;
+                .inr{
+                    display: flex;
+                }
+                .online-lecture-left{
+                    margin-right: 20px;
+                }
+                img{
+                    border-radius: 20px;
+                    width: 366px;
+                    height: 428px;
+                }
+            }
+        }
+    }
+    .sub-ceo-kr{
+        .ceo-intro-section02{
+            .small-group-benefit{
+                div{
+                    & + div{
+                        margin-top: 20px;
+                    }
+                }
+                .small-group-benefit01{
+                    display: flex;
+                    div,
+                    figure{
+                        flex: 1;
+                    }
+                    figure{
+                        margin-left: 30px;
+                    }
+                    img{
+                        max-height: 335px;
+                    }
+                }
+                .small-group-benefit02{
+                    display: flex;
+                    align-items: center;
+                    div,
+                    figure{
+                        flex: 1;
+                    }
+                    figure{
+                        margin-right: 30px;
+                    }
+                    img{
+                        max-height: 575px;
+                        filter: drop-shadow(0px 4px 19px rgba(186, 196, 219, 0.66));
+                        border-radius: 20px;
+                    }
+                }
+                .small-group-benefit03{
+                   margin-top: 50px;
+                }
+            }
+        }
+        .ceo-intro-section03{
+            .ceo-kr-quote{
+                background-color: #F7F5FE;
+                padding:  60px 0 ;
+                position: relative;
+                .quote-txt{
+                    padding: 0 80px;
+                    strong{
+                        font-size: 30px;
+                        display: block;
+                        font-weight: 700;
+                    }
+                    p{
+                        margin:30px 0 ;
+                        font-size: 20px;
+                    }
+                    b{
+                        font-size: 25px;
+                        text-decoration: underline;
+                        font-weight: 700;
+                        color: $color-secondary;
+                        line-height: 1.5;
+                    }
+                    &::before,
+                    &::after{
+                        content:"";
+                        width: 63px;
+                        height: 63px;
+                        background: url(/public/img/icon-quote.png) no-repeat center / cover;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0; top: -30px;
+                    }
+                    &::after{
+                        right: 0;
+                        left: unset;
+                        top: unset;
+                        bottom: -30px;
+                        transform: rotate(180deg);
+                    }
+                }
+                .inr{
+                    >figure{
+                        position: absolute;
+                        right: 0; top: 50%;
+                        transform: translateY(-50%);
+                        img{
+                            max-height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+        .ceo-intro-section04{
+            .group-study-desc{
+                display: flex;
+                margin-top: 80px;
+                figure{
+                    margin-left: 30px;
+                    img{
+                        min-width: 405px;
+                        max-height: 375px;
+                    }
+                }
+            }
+            .experiment-swiper{
+                .experiment-content{
+                    text-align: center;
+                    dt{
+                        font-size: 14px;
+                        color: #666;
+                        font-weight: 400;
+                        white-space: nowrap;
+                    }
+                    dd{
+                        font-size: 20px;
+                        font-weight: 700;
+                        white-space: nowrap;
+                    }
+                }
+                .swiper-navigation-wrap{
+                    position: absolute;
+                    right: 0; top: 40px;
+                    display: flex;
+                    div{
+                        position: static;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background: $color-primary url(/public/img/more-arrow-white.png) no-repeat center / 24px 24px;
+                        margin-left: 10px;
+                        &.swiper-button-prev{
+                            transform: rotate(-180deg);
+                        }
+                       
+                    }
+                }
+            }
+        }
+        .ceo-intro-section05{
+            .two-rabbits-content{
+                padding: 50px 0 100px;
+                background-color: #F4F7FE;
+                figure{
+                    margin: 50px 0;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .ceo-intro-section06{
+            .ceo-kr-history-lists{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: 50%;
+                    position: relative;
+                    padding-left: 30px;
+                    font-size: 18px;
+                    margin-bottom: 25px;
+                    line-height: 1.5;
+                    &::before{
+                        content:"";
+                        width: 24px;height: 24px;
+                        background: url(/public/img/icon-check-gray.png) no-repeat center / 24px;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0; top: 0;
+                    }
+                    &.point{
+                        &::before{
+                            background: url(/public/img/icon-check-pupple.png) no-repeat center / 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media(max-width: 1200px){
     .sub{
@@ -225,10 +630,75 @@
                 }
             }
         }
+        .sub-ceo {
+            .ceo-intro-section02 {
+                h2{
+                    br{
+                        display: none;
+                    }
+                }
+                .program-themes{
+                    display: flex;
+                    align-items: flex-start;
+                    .program-theme{
+                        display: flex;
+                        dl{
+                            margin-left: 20px;
+                        }
+                        & + .program-theme{
+                            margin-left: 20px;
+                            margin-top: 0;
+                        }
+                    }
+                }
+                .kr-benefit-right{
+                    width: 100%;
+                    max-width: 100%;
+                    padding:  40px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1100px){
+    .sub{
+        .sub-ceo {
+            .ceo-intro-section02 {
+                .inr{
+                    display: block;
+                }
+                .kr-benefit-right{
+                    margin-top: 30px;
+                    position: static;
+                }
+            }
+        }
     }
 }
 @media(max-width: 991px){
     .sub {
+        h2{
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        article{
+            section{
+                margin-bottom: 50px;
+                &:not(:first-child){
+                    margin-top: 50px;
+                }
+                p{
+                    font-size: 16px;
+                    & + p{
+                        margin-top: 20px;
+                    }
+                }
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
         .sub-title-wrap {
             h1{
                 font-size: 35px;
@@ -299,13 +769,114 @@
                 }
             }
         }
+        .sub-haollaProgram{
+            .haolla-program-content{
+                .haolla-program-section01{
+                    flex-direction: column-reverse;
+                    align-items: start;
+                    >figure{
+                        width: 100%;
+                        &::after{
+                            background: linear-gradient(183deg, #FFFFFF 17.7%, rgba(255, 255, 255, 0) 26.91%)
+                        }
+                    }
+                    .hp-section01-txt{
+                        width: 100%;
+                        padding : 0 16px;
+                    }
+                }
+                .haolla-program-section04{
+                    figure{
+                        margin-bottom: 50px;
+                    }
+                    img{
+                        max-width: 100%;
+                        max-height: 150px;
+                    }
+                }
+               
+            }
+        }
+        .program-theme{
+            display: flex;
+        }
+        .sub-ceo {
+            .ceo-intro-section01 {
+                figure{
+                    font-size: 14px;
+                    text-align: center;
+                    margin-right: 15px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                img{
+                    max-height: 255px;
+                }
+            }
+            .ceo-intro-section02 {
+                .program-themes{
+                    display: block;
+                    .program-theme{
+                        & + .program-theme{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .sub-ceo-kr {
+            .ceo-intro-section03 {
+                .ceo-kr-quote {
+                    .quote-txt {
+                        padding: 0 50px;
+                        strong{
+                            font-size: 25px;
+                        }
+                        p{
+                            font-size: 14px;
+                            margin: 20px 0;
+                        }
+                        b{
+                            font-size: 18px;
+                        }
+                        &::before,
+                        &::after{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+            .ceo-intro-section04 {
+                .group-study-desc {
+                    figure {
+                        img{
+                            min-width: 305px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media(max-width: 767px){
-    
-
     .sub {
         padding: 50px 0 ;
+        h2{
+            font-size: 18px;
+        }
+        article {
+            section {
+                margin-bottom: 30px;
+                &:not(:first-child){
+                    margin-top: 30px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
         .sub-title-wrap {
             margin-bottom: 50px;
             display: block;
@@ -398,6 +969,245 @@
                                 margin-left: 0; 
                                 margin-top: 30px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+        .sub-haollaProgram {
+            .haolla-program-content {
+                .haolla-program-section01 {
+                    > figure {
+                        img{
+                            max-height: 200px;
+                            min-height: 200px;
+                        }
+                    }
+                }
+                .haolla-program-section03{
+                    padding : 30px 16px
+                }
+            }
+            
+        }
+        .program-theme{
+            figure{
+                width: 50px;
+                min-width: 50px;
+                height: 50px;
+                min-height: 50px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            & + .program-theme{
+                margin-top: 20px;
+            }
+            dl{
+                margin-left: 15px;
+            }
+            dt{
+                font-size: 12px;
+            }
+            dd{
+                font-size: 16px;
+            }
+        }
+        .sub-ceo {
+            .ceo-intro-section01 {
+                display: block;
+                figure{
+                    margin-bottom: 30px;
+                }
+            }
+            .ceo-intro-section02 {
+                .kr-benefit-right {
+                    padding: 30px 20px;
+                    ul {
+                        li{
+                            font-size: 14px;
+                            display: block;
+                            small{
+                                width: 23px;
+                                min-width: 23px;
+                                height: 23px;
+                                min-height: 23px;
+                                font-size: 14px;
+                                margin-right: 10px;
+                                border-radius: 2px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .ceo-intro-section03 {
+                .eng-ceo-point{
+                    display: block;
+                    >figure{margin-bottom: 10px;}
+                    img{
+                        width: 53px;
+                        height: 53px;
+                    }
+                }
+            }
+            .ceo-intro-section04 {
+                .parent-concern {
+                    .inr{
+                        display: block;
+                    }
+                    .parent-concern-left{
+                        margin-bottom: 40px;
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .ceo-intro-section05{
+                .rising-online-lecture {
+                    padding: 30px 0;
+                    background-size: 100% 100%;
+                    .inr{
+                        display: block;
+                        .online-lecture-left{
+                            margin-right: 0;
+                        }
+                        .online-lecture-right{
+                            border-radius: 20px;
+                            overflow: hidden;
+                            figure{
+                                text-align: center;
+                                margin-top: 30px;
+                            }
+                            img{
+                               width: auto;
+                               height: 328px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sub-ceo-kr{
+            .ceo-intro-section02{
+                h2{
+                    span{
+                        display: block;
+                    }
+                }
+                .small-group-benefit {
+                    .small-group-benefit01{
+                        display: block;
+                        figure{
+                            margin: 20px 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .small-group-benefit02{
+                        flex-direction: column-reverse;
+                        figure{
+                            margin: 20px 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .small-group-benefit03{
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .ceo-intro-section03 {
+                .ceo-kr-quote {
+                    .quote-txt{
+                        padding: 30px 0;
+                        strong{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                        b{
+                            font-size: 16px;
+                        }
+                        &::before,
+                        &::after{
+                            width: 40px;
+                            height: 40px;
+                            left: 16px;
+                        }
+                        &::after{
+                            left: unset;
+                            right: 16px;
+                        }
+                    }
+                    
+                    .inr{
+                        >figure{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .ceo-intro-section04 {
+                .experiment-swiper{
+                    .swiper-container{
+                        padding-bottom: 80px;
+                    }
+                    .swiper-navigation-wrap {
+                        position: absolute;
+                        bottom: 0;
+                        top: unset;
+                        // left: 50%;
+                        // transform: translateX(-50%);
+                        left: 0;
+                        width: 120px;
+                        div{
+                            width: 50px!important;height: 50px!important;
+                        }
+                    }
+                    .experiment-content{
+                        dt{
+                            font-size: 12px;
+                        }
+                       dd{
+                         font-size: 16px;
+                       }
+                    }
+                }
+                .group-study-desc{
+                    display: block;
+                    margin-top: 30px;
+                    figure{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 100%;min-width: 100%;
+                        }
+                    }
+                }
+            }
+            .ceo-intro-section05 {
+                .two-rabbits-content{
+                    padding:  50px 0;
+                    img{
+                        max-height: 300px;
+                    }
+                }
+            }
+            .ceo-intro-section06 {
+                .ceo-kr-history-lists {
+                    display: block;
+                    li{
+                        width: 100%;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        br{
+                            display: none;
                         }
                     }
                 }
