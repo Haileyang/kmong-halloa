@@ -2595,6 +2595,153 @@ footer .footer-bottom .footer-right p {
 .sub .sub-ceo-kr .ceo-intro-section06 .ceo-kr-history-lists li.point::before {
   background: url(/public/img/icon-check-pupple.png) no-repeat center/24px;
 }
+.sub .sub-inquiry .inquiry-wrap {
+  height: 930px;
+  width: 100%;
+  background: url(/public/img/inquiry-bg.jpg) no-repeat 20% top/cover;
+}
+.sub .sub-inquiry .inquiry-form {
+  position: absolute;
+  right: 16px;
+  top: -120px;
+  width: 65%;
+  padding: 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 62px rgba(0, 0, 0, 0.1);
+}
+.sub .sub-inquiry .inquiry-form .input-wrap {
+  margin-bottom: 30px;
+  display: block;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap .label {
+  display: block;
+  font-size: 18px;
+  color: #444;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap input {
+  font-size: 18px;
+  border-radius: 5px;
+  height: 60px;
+  padding: 0 15px;
+  border: 1px solid #eee;
+  display: block;
+  width: 100%;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap textarea {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 20px 15px;
+  border: 1px solid #eee;
+  display: block;
+  width: 100%;
+  min-height: 300px;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap .tel-wrap {
+  display: flex;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap .tel-wrap .verification-btn {
+  margin-left: 10px;
+  background-color: #5620A8;
+  border-radius: 5px;
+  padding: 20px;
+  height: 60px;
+  text-align: center;
+}
+.sub .sub-inquiry .inquiry-form .input-wrap .tel-wrap .verification-btn a {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  white-space: nowrap;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox {
+  position: relative;
+  display: block;
+  margin: 40px 0;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox .label-txt {
+  padding-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox .label-txt small {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  line-height: 1.5;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox .label-txt small a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox .label-txt .btn {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #888;
+  text-decoration: underline;
+  font-weight: 400;
+  box-shadow: none;
+  color: #888 !important;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox input[type=checkbox] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  cursor: pointer;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox input[type=checkbox] + label {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 15px;
+  width: 100%;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox input[type=checkbox]:checked + label:before {
+  background-color: #2464EB;
+}
+.sub .sub-inquiry .inquiry-form .custom-checkbox input[type=checkbox] + label:before {
+  content: " ";
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  line-height: 3px;
+  font-size: 17px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sub .sub-inquiry .inquiry-form .submit-btn {
+  width: 100%;
+  height: 60px;
+  border-color: #2464EB;
+  border-radius: 5px;
+  background-color: #2464EB;
+  color: #fff;
+  font-weight: 700;
+}
 
 @media (max-width: 1200px) {
   .sub .sub-mission .mission-list .mission-left {
@@ -3079,5 +3226,47 @@ footer .footer-bottom .footer-right p {
   }
   .sub .sub-ceo-kr .ceo-intro-section06 .ceo-kr-history-lists li br {
     display: none;
+  }
+  .sub .sub-inquiry .inquiry {
+    background-color: #E2E2E4;
+    padding-bottom: 200px;
+  }
+  .sub .sub-inquiry .inquiry-wrap {
+    background: #E2E2E4 url(/public/img/inquiry-bg-mb.jpg) no-repeat top/cover;
+    padding-top: 200px;
+  }
+  .sub .sub-inquiry .inquiry-form {
+    position: static;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .sub .sub-inquiry .inquiry-form .input-wrap .label {
+    font-size: 14px;
+  }
+  .sub .sub-inquiry .inquiry-form .input-wrap input {
+    font-size: 16px;
+    height: 50px;
+  }
+  .sub .sub-inquiry .inquiry-form .input-wrap textarea {
+    font-size: 16px;
+    min-height: 200px;
+  }
+  .sub .sub-inquiry .inquiry-form .input-wrap .tel-wrap .verification-btn {
+    height: 50px;
+    padding: 10px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .sub .sub-inquiry .inquiry-form .custom-checkbox {
+    margin: 20px 0 30px 0;
+    height: 25px;
+  }
+  .sub .sub-inquiry .inquiry-form .submit-btn {
+    height: 50px;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=app.css.map */
