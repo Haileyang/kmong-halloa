@@ -272,9 +272,10 @@ header{
                 background-color: #fff;
                 padding: 25px;
                 border-radius: 20px;
-                box-shadow: -10px 5px 34px rgba(255, 255, 255, 0.25);
+                box-shadow: 9px 43px 31px rgb(0 0 0 / 5%);
                 &.active{
                     display: block;
+                    z-index: 100;
                 }
                 .login-mypage-menus{
                     margin-bottom: 20px;
