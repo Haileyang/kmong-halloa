@@ -2397,6 +2397,9 @@ footer .footer-bottom .footer-right p {
 .sub .sub-ceo .ceo-intro-section03 .eng-ceo-point figure {
   margin-right: 20px;
 }
+.sub .sub-ceo .ceo-intro-section03 .eng-ceo-point > div {
+  flex: 1;
+}
 .sub .sub-ceo .ceo-intro-section04 .parent-concern {
   background-color: #F7F5FE;
   padding: 35px 0;
@@ -2428,6 +2431,7 @@ footer .footer-bottom .footer-right p {
 }
 .sub .sub-ceo .ceo-intro-section05 .rising-online-lecture .online-lecture-left {
   margin-right: 20px;
+  flex: 1;
 }
 .sub .sub-ceo .ceo-intro-section05 .rising-online-lecture img {
   border-radius: 20px;
@@ -2967,13 +2971,14 @@ footer .footer-bottom .footer-right p {
   }
   .sub .sub-title-wrap h1 {
     font-size: 25px;
+    text-align: center;
   }
   .sub .sub-title-wrap .breadscrumbs {
     margin-top: 20px;
-    justify-content: flex-end;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 15px 0;
+    justify-content: center;
   }
   .sub .sub-title-wrap .breadscrumbs li {
     font-size: 12px;
@@ -3128,8 +3133,10 @@ footer .footer-bottom .footer-right p {
     margin-top: 30px;
   }
   .sub .sub-ceo .ceo-intro-section05 .rising-online-lecture .inr .online-lecture-right img {
-    width: auto;
     height: 328px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .sub .sub-ceo-kr .ceo-intro-section02 h2 span {
     display: block;
