@@ -655,7 +655,14 @@ footer .footer-bottom .footer-right p {
     display: none;
   }
   header .mobile-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+  header .mobile-btn span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+    cursor: pointer;
   }
   .btn a {
     font-size: 18px !important;
