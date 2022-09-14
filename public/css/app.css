@@ -1250,6 +1250,8 @@ footer .footer-bottom .footer-right p {
 }
 .program-swiper-content .best img {
   max-height: 62px;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 0;
 }
 
@@ -2332,6 +2334,7 @@ footer .footer-bottom .footer-right p {
 .sub .sub-ceo .ceo-intro-section01 figure {
   min-width: 355px;
   margin-right: 50px;
+  text-align: center;
 }
 .sub .sub-ceo .ceo-intro-section01 img {
   max-height: 328px;

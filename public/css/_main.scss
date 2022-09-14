@@ -486,6 +486,7 @@
         display: inline-block;
         img{
             max-height: 62px;
+            object-fit: contain;
             border-radius: 0;
         }
     }
