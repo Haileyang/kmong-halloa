@@ -109,6 +109,10 @@ body, a {
   color: #5620A8;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .font-roboto {
   font-family: "Roboto", sans-serif;
 }
