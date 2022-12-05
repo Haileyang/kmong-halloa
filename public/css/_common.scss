@@ -11,6 +11,7 @@ $font-roboto : 'Roboto', sans-serif;
 $color-primary: #2464EB;
 $color-secondary: #5620A8;
 $color-yellow: #FBD650;
+$color-error: #f30606;
 $shadow-primary:3px 6px 17px rgba(36, 100, 235, 0.31);
 
 body, a{
@@ -151,6 +152,73 @@ body, a{
 }
 .mg-t0{
     margin-top: 0!important;
+}
+.custom-checkbox{
+    position: relative;
+    display: block;
+    margin:  40px 0;
+    .label-txt{
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        small{
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+            line-height: 1.5;
+            a{
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+        .btn{
+            background-color: transparent;
+            border-radius: 0;
+            border: none; 
+            outline: none;
+            font-size: 14px;
+            color: #888;
+            text-decoration: underline;
+            font-weight: 400;
+            box-shadow: none;
+            color: #888!important;
+        }
+    }
+    input[type="checkbox"] {
+        width: 0;height: 0;
+        opacity: 0;
+        position: relative;left: 0; top: 0;
+        z-index: 10000;
+        cursor: pointer;
+    }
+    input[type="checkbox"] + label {display: inline-block;
+        position: absolute; left: 0;
+        cursor: pointer;
+        -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;
+        font-size: 15px;
+        width: 100%;
+    }
+    input[type="checkbox"]:checked + label:before{
+        background-color: $color-primary;
+    }
+    input[type="checkbox"] + label:before {content: ' ';
+        content: " ";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 50%;
+        line-height: 3px;
+        font-size: 17px;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 // HEADER
 header{
