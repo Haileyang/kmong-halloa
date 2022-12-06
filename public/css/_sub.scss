@@ -825,11 +825,15 @@
                     display: flex;
                     margin-left: 10px;
                     justify-content: flex-end;
+                    margin: 0;
                     li{
                         white-space: nowrap;
+                        display: flex;
+                        align-items: center;
                         a{
                             font-size: 14px;
                             color : #888;
+                            padding: 0;
                         }
                         & + li{
                             margin-left: 10px;
@@ -839,7 +843,7 @@
                                 content:"|";
                                 font-size: 14px;
                                 color : #888;
-                                margin-left: 5px;
+                                margin-left: 10px;
                                 vertical-align: middle;
                             }
                         }

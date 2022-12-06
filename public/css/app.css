@@ -2916,13 +2916,17 @@ footer .footer-bottom .footer-right p {
   display: flex;
   margin-left: 10px;
   justify-content: flex-end;
+  margin: 0;
 }
 .sub .login .login-btn-wrap .login-more-wrap .forget-lists li {
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .sub .login .login-btn-wrap .login-more-wrap .forget-lists li a {
   font-size: 14px;
   color: #888;
+  padding: 0;
 }
 .sub .login .login-btn-wrap .login-more-wrap .forget-lists li + li {
   margin-left: 10px;
@@ -2931,7 +2935,7 @@ footer .footer-bottom .footer-right p {
   content: "|";
   font-size: 14px;
   color: #888;
-  margin-left: 5px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 .sub .login .login-btn-wrap .sns-login {
