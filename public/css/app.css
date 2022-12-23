@@ -3838,7 +3838,10 @@ header .header-left .gnb-lists .gnb-list > a {
   color: #fff;
 }
 .new-sub .table-list-wrap {
-  overflow: scroll;
+  overflow-x: scroll;
+}
+.new-sub .table-list-wrap::-webkit-scrollbar {
+  display: none;
 }
 .new-sub .table-list-wrap table {
   width: 100%;
@@ -3997,6 +4000,7 @@ header .header-left .gnb-lists .gnb-list > a {
   }
   .new-sub .filtering-wrap {
     height: auto;
+    margin-bottom: 40px;
   }
   .new-sub .filtering-wrap .tab-lists li {
     padding: 12px 20px;

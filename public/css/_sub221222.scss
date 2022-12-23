@@ -127,7 +127,10 @@
         }
     }
     .table-list-wrap{
-        overflow: scroll;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
         table{
             width: 100%;
             th,td{
@@ -307,6 +310,7 @@
         }
         .filtering-wrap {
             height: auto;
+            margin-bottom: 40px;
             .tab-lists{
                 li{
                     padding: 12px 20px;
