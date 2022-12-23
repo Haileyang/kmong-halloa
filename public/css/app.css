@@ -3498,4 +3498,116 @@ footer .footer-bottom .footer-right p {
     height: 50px;
     font-size: 16px;
   }
+}
+.sub .filtering-wrap {
+  height: 44px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.sub .filtering-wrap .search {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sub .filtering-wrap .search input {
+  padding: 15px 0;
+  width: 270px;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  outline: none;
+}
+.sub .filtering-wrap .search input::-moz-placeholder {
+  color: #888;
+}
+.sub .filtering-wrap .search input:-ms-input-placeholder {
+  color: #888;
+}
+.sub .filtering-wrap .search input::placeholder {
+  color: #888;
+}
+.sub .filtering-wrap .search button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.sub .filtering-wrap .search figure {
+  width: 44px;
+  height: 44px;
+  background-color: #2464EB;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub .filtering-wrap .search figure img {
+  max-height: 14px;
+}
+.sub .table-list-wrap {
+  overflow: scroll;
+}
+.sub .table-list-wrap table {
+  width: 100%;
+}
+.sub .table-list-wrap table th, .sub .table-list-wrap table td {
+  text-align: center;
+  padding: 20px 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.sub .table-list-wrap table thead {
+  border-bottom: 1px solid #000;
+}
+.sub .table-list-wrap table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.sub .table-list-wrap table tbody tr td {
+  color: #666;
+}
+.sub .table-list-wrap table tbody tr td.done {
+  color: #2464EB;
+}
+.sub .table-list-wrap table tbody tr td.pending {
+  color: #f30606;
+}
+.sub .table-list-wrap table tbody tr td:first-child {
+  color: #2464EB;
+}
+.sub .pagination-wrap {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.sub .pagination-wrap .pagination-arrow a {
+  color: #888;
+  transition: all 0.3s;
+}
+.sub .pagination-wrap .pagination-arrow a:hover {
+  color: #222;
+}
+.sub .pagination-wrap .pagination-nums {
+  display: flex;
+  align-items: start;
+  margin: 0 15px;
+}
+.sub .pagination-wrap .pagination-nums li {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: all 0.3s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sub .pagination-wrap .pagination-nums li:hover {
+  background-color: #ccc;
+}
+.sub .pagination-wrap .pagination-nums li.active {
+  background-color: #2464EB;
+  color: #fff;
 }/*# sourceMappingURL=app.css.map */
