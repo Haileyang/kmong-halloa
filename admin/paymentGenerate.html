@@ -58,7 +58,7 @@
                         </span>
                     </div> -->
                     <div class="after-login">
-                        <!-- <figure class="profile"><img src="public/img/profile-default.png" alt="profile-default"/></figure> -->
+                        <!-- <figure class="profile"><img src="/public/img/profile-default.png" alt="profile-default"/></figure> -->
                         <span class="user-name" onclick="loginMypageToggle()">
                             <strong>홍길동</strong>님
                         </span>
@@ -97,7 +97,7 @@
                             </ul>
                             <span class="logout">
                                 <a href="">
-                                    <figure><img src="public/img/icon-logout.png" alt="logout" /></figure>
+                                    <figure><img src="/public/img/icon-logout.png" alt="logout" /></figure>
                                     로그아웃
                                 </a>
                             </span>
@@ -106,14 +106,14 @@
                 </div>
                 <span class="mobile-btn" onclick="mobileOpen()">
                     <span>MENU</span>
-                    <img src="public/img/icon-hamberger.png" alt="mobile">
+                    <img src="/public/img/icon-hamberger.png" alt="mobile">
                 </span>
             </div>
         </div>
         <div class="mobile-menu-open">
             <div class="inr">
                 <div class="mobile-menu-profile">
-                    <!-- <figure><img src="public/img/profile-default.png" alt=""/></figure> -->
+                    <!-- <figure><img src="/public/img/profile-default.png" alt=""/></figure> -->
                     <div class="login-profile">
                         <!-- <div class="before-login">로그인 및 회원가입</div> -->
                         <div class="after-login">
@@ -154,19 +154,19 @@
                 </div>
                 <span class="logout">
                     <a href="">
-                        <figure><img src="public/img/icon-logout.png" alt="logout" /></figure>
+                        <figure><img src="/public/img/icon-logout.png" alt="logout" /></figure>
                         로그아웃
                     </a>
                 </span>
             </div>
             <span class="mobile-menu-dim"></span>
             <span class="mobile-close" onclick="mobileClose()">
-                <img src="public/img/icon-close.png" alt="close">
+                <img src="/public/img/icon-close.png" alt="close">
             </span>
         </div>
     </header>
     <!-- raon : 변경사항 -- start -->
-    <main id="main" class="sub">
+    <main id="main" class="sub new-sub">
         <section class="sub-admin-payment">
             <div class="inr">
                 <div class="sub-title-wrap">
@@ -199,57 +199,59 @@
                         <strong>전화번호로 학생정보를 검색한 후, 결제 금액 및 전달내용을 입력해 결제페이지를 생성해주세요.</strong>
                     </div>
                     <form action="">
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">이름</label>
-                                <input type="text" placeholder="이름을 입력해주세요.">
+                        <div>
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">이름</label>
+                                    <input type="text" placeholder="이름을 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 이름을 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 이름을 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">전화번호</label>
-                                <input type="text" placeholder="전화번호를 입력해주세요.">
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">전화번호</label>
+                                    <input type="text" placeholder="전화번호를 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 전화번호를 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 전화번호를 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">이메일</label>
-                                <input type="text" placeholder="이메일를 입력해주세요.">
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">이메일</label>
+                                    <input type="text" placeholder="이메일를 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 이메일를 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 이메일를 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">결제 해야 할 금액</label>
-                                <input type="text" placeholder="결제 해야 할 금액을 입력해주세요.">
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">결제 해야 할 금액</label>
+                                    <input type="text" placeholder="결제 해야 할 금액을 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 결제 해야 할 금액을 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 결제 해야 할 금액을 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">회원가입일</label>
-                                <input type="text" placeholder="회원가입일을 입력해주세요.">
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">회원가입일</label>
+                                    <input type="text" placeholder="회원가입일을 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 회원가입일을 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 회원가입일을 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">유료회원전환일</label>
-                                <input type="text" placeholder="유료회원전환일을 입력해주세요.">
+                            <span class="input-wrap">
+                                <span>
+                                    <label for="">유료회원전환일</label>
+                                    <input type="text" placeholder="유료회원전환일을 입력해주세요.">
+                                </span>
+                                <!-- <small>올바른 형식의 유료회원전환일을 입력해주세요.</small> -->
                             </span>
-                            <small>올바른 형식의 유료회원전환일을 입력해주세요.</small>
-                        </span>
-                        <span class="input-wrap">
-                            <span>
-                                <label for="">회원 전달 내용</label>
-                                <textarea name="" id="" cols="30" rows="10">
-                                    회원 전달 내용을 입력해주세요
-                                </textarea>
+                            <span class="input-wrap text-wrap">
+                                <span>
+                                    <label for="">회원 전달 내용</label>
+                                    <textarea name="" id="" cols="30" rows="10">회원 전달 내용을 입력해주세요</textarea>
+                                </span>
                             </span>
-                        </span>
-                        <button class="btn fill primary"> 결제페이지 생성</button>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn fill primary"> 결제페이지 생성</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -261,18 +263,18 @@
             <div class="footer-top">
                 <div class="logo-wrap">
                     <a href="/index.html">
-                        <figure class="logo"><img src="public/img/logo-f.png" alt="logo" /></figure>
+                        <figure class="logo"><img src="/public/img/logo-f.png" alt="logo" /></figure>
                     </a>
                 </div>
                 <ul class="footer-sns-lists">
                     <li class="footer-sns-list">
-                        <a href=""><img src="public/img/icon-twitter.png" alt="twitter"></a>
+                        <a href=""><img src="/public/img/icon-twitter.png" alt="twitter"></a>
                     </li>
                     <li class="footer-sns-list">
-                        <a href=""><img src="public/img/icon-facebook.png" alt="facebook"></a>
+                        <a href=""><img src="/public/img/icon-facebook.png" alt="facebook"></a>
                     </li>
                     <li class="footer-sns-list">
-                        <a href=""><img src="public/img/icon-insta.png" alt="insta"></a>
+                        <a href=""><img src="/public/img/icon-insta.png" alt="insta"></a>
                     </li>
                 </ul>
             </div>
