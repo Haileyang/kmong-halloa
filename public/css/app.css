@@ -3776,6 +3776,12 @@ header .header-left .gnb-lists .gnb-list > a {
   width: 100%;
   margin-bottom: 60px;
 }
+.new-sub .filtering-wrap .btn {
+  padding: 15px 30px;
+}
+.new-sub .filtering-wrap .btn a {
+  color: inherit;
+}
 .new-sub .filtering-wrap .search {
   position: absolute;
   right: 0;
@@ -3860,6 +3866,12 @@ header .header-left .gnb-lists .gnb-list > a {
 }
 .new-sub .table-list-wrap table tbody tr td {
   color: #666;
+}
+.new-sub .table-list-wrap table tbody tr td.table-list-title {
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
 }
 .new-sub .table-list-wrap table tbody tr td.done {
   color: #2464EB;

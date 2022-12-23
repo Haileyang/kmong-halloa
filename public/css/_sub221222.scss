@@ -69,6 +69,12 @@
         position: relative;
         width: 100%;
         margin-bottom: 60px;
+        .btn{
+            padding: 15px 30px;
+            a{
+                color: inherit;
+            }
+        }
         .search{
             position: absolute;
             right: 0; top: 0; 
@@ -147,6 +153,12 @@
                     border-bottom: 1px solid #eee;
                     td{
                         color: #666;
+                        &.table-list-title{
+                            text-align: left;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            max-width: 300px;
+                        }
                         &.done{
                             color: $color-primary;
                         }
