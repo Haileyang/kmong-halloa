@@ -27,6 +27,20 @@
         position: relative;
         margin-bottom: 25px;
         display: block;
+        &.text-wrap{
+            span{
+                display: block;
+            }
+            min-width: 100%;
+            textarea{
+                width: 100%;
+                padding: 20px 30px;
+                background-color: #f7f7f7;
+                outline: none;
+                border: none;
+                border-radius: 20px;
+            }
+        }
         >span {
             display: flex;
             button {
@@ -62,6 +76,22 @@
             font-size: 12px;
             color: $color-error;
             padding: 0 15px;
+        }
+    }
+    .btn-lists{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            .btn{
+                padding: 15px 40px;
+                &.d-grey{
+                    background-color: #888;
+                }
+            }
+            & + li{
+                margin-left: 10px;
+            }
         }
     }
     .filtering-wrap{
@@ -266,20 +296,7 @@
                     line-height: 60px;
                     margin-right: 30px;
                 }
-                &.text-wrap{
-                    span{
-                        display: block;
-                    }
-                    min-width: 100%;
-                    textarea{
-                        width: 100%;
-                        padding: 20px 30px;
-                        background-color: #f7f7f7;
-                        outline: none;
-                        border: none;
-                        border-radius: 25px;
-                    }
-                }
+                
             }
             .btn-wrap{
                 margin-top: 60px;
