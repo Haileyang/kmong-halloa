@@ -1,9 +1,74 @@
-.sub{
+.new-sub{
+    .btn{
+        padding: 20px 60px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        outline: none;
+        &.fill{
+            color: #fff;
+            &.primary{
+                background-color: $color-primary;
+                
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        &.line{
+            color:$color-primary;
+            &.primary{
+                border-color: $color-primary;
+            }
+        }
+    }
+    .input-wrap {
+        position: relative;
+        margin-bottom: 25px;
+        display: block;
+        >span {
+            display: flex;
+            button {
+                max-width: 126px;
+                font-size: 16px;
+                margin-left: 10px;
+            }
+        }
+        figure {
+            position: absolute;
+            right: 15px;
+            top: 18px;
+            img {
+                max-height: 25px;
+                display: none;
+                &.on {
+                    display: block;
+                }
+            }
+        }
+        input[type=text] {
+            padding: 20px 16px;
+            background-color: #f7f7f7;
+            border-radius: 70px;
+            border: none;
+            outline: none;
+            width: 100%;
+            display: block;
+        }
+        small {
+            display: block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: $color-error;
+            padding: 0 15px;
+        }
+    }
     .filtering-wrap{
         height: 44px;
         position: relative;
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         .search{
             position: absolute;
             right: 0; top: 0; 
@@ -33,6 +98,30 @@
                 align-items: center;
                 img{
                     max-height: 14px;
+                }
+            }
+        }
+        .tab-lists{
+            display: flex;
+            align-items: center;
+            li{
+                padding: 15px 24px;
+                font-size: 20px;
+                border-radius: 50px;
+                a{
+                    color: #ccc;
+                    transition: all 0.3s;
+                }
+                &:hover{
+                    a{
+                        color: $color-primary;
+                    }
+                }
+                &.active{
+                    a{
+                        color: #fff;
+                    }
+                    background-color: $color-primary;
                 }
             }
         }
@@ -107,5 +196,137 @@
                 }
             }
         }
+    }
+    .sub-admin-payment{
+        .payment-alert{
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            strong{
+                color: $color-primary;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            figure{
+                min-width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                border: 1px solid $color-primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                img{
+                    max-height: 14px;
+                }
+            }
+        }
+        .payment-form-wrap{
+            form{
+                div{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+            .input-wrap{
+                width: calc(100%/2 - 40px);
+                &:nth-child(odd){
+                    margin-right: 80px;
+                    label{
+                        min-width: 80px;
+                    }
+                    small{
+                        margin-left: 110px;
+                    }
+                }
+                &:nth-child(even){
+                    label{
+                        min-width: 120px;
+                    }
+                    small{
+                        margin-left: 150px;
+                    }
+                }
+                label{
+                    line-height: 60px;
+                    margin-right: 30px;
+                }
+                &.text-wrap{
+                    span{
+                        display: block;
+                    }
+                    min-width: 100%;
+                    textarea{
+                        width: 100%;
+                        padding: 20px 30px;
+                        background-color: #f7f7f7;
+                        outline: none;
+                        border: none;
+                        border-radius: 25px;
+                    }
+                }
+            }
+            .btn-wrap{
+                margin-top: 60px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    .new-sub{
+        .sub-admin-payment {
+            .payment-form-wrap {
+                form {
+                    div{
+                        display: block;
+                        .input-wrap{
+                            width: 100%;
+                            span{
+                                display: block;
+                            }
+                            label{
+                                min-width: auto;
+                                line-height: 20px;
+                                margin-left: 15px;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .new-sub {
+        .btn{
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+        .filtering-wrap {
+            height: auto;
+            .tab-lists{
+                li{
+                    padding: 12px 20px;
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+            .search{
+                text-align: right;
+                margin-top: 20px;
+                position: static;
+            }
+        }
+        .sub-admin-payment {
+            .payment-alert {
+                strong{
+                    font-size: 16px;
+                }
+            }
+       }
     }
 }
