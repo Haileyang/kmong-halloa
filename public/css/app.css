@@ -3544,6 +3544,28 @@ footer .footer-bottom .footer-right p {
 .sub .filtering-wrap .search figure img {
   max-height: 14px;
 }
+.sub .filtering-wrap .tab-lists {
+  display: flex;
+  align-items: center;
+}
+.sub .filtering-wrap .tab-lists li {
+  padding: 15px 24px;
+  font-size: 20px;
+  border-radius: 50px;
+}
+.sub .filtering-wrap .tab-lists li a {
+  color: #ccc;
+  transition: all 0.3s;
+}
+.sub .filtering-wrap .tab-lists li:hover a {
+  color: #2464EB;
+}
+.sub .filtering-wrap .tab-lists li.active {
+  background-color: #2464EB;
+}
+.sub .filtering-wrap .tab-lists li.active a {
+  color: #fff;
+}
 .sub .table-list-wrap {
   overflow: scroll;
 }
@@ -3610,4 +3632,27 @@ footer .footer-bottom .footer-right p {
 .sub .pagination-wrap .pagination-nums li.active {
   background-color: #2464EB;
   color: #fff;
+}
+.sub .sub-admin-payment .payment-alert {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.sub .sub-admin-payment .payment-alert strong {
+  color: #2464EB;
+  font-size: 18px;
+  font-weight: 500;
+}
+.sub .sub-admin-payment .payment-alert figure {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #2464EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.sub .sub-admin-payment .payment-alert figure img {
+  max-height: 14px;
 }/*# sourceMappingURL=app.css.map */
