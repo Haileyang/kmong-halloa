@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하올라 - 자유게시판</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/public/css/app.css">
+    <script defer src="/public/js/main.js"></script> 
+</head>
+
+<body>
+    <header id="header">
+        <div class="inr">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="/public/img/logo.png" alt="logo"/></figure>
+                    </a>
+                </div>
+                <ul class="gnb-lists">
+                    <li class="gnb-list">
+                        <span>하올라 소개</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/Ceo.html">대표 한마디</a></li>
+                            <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="/Ceo-kr.html">한국인 대표의 고백</a></li>
+                    <li class="gnb-list">
+                        <span>하올라 프로그램</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/haollaProgram.html">하올라 프로그램</a></li>
+                            <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                            <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                            <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                    <li class="gnb-list"><a href="/inquiry.html">무료체험신청</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div class="login-status">
+                    <!-- <div class="before-login">
+                        <span class="btn fill">
+                            <a href="">로그인</a>
+                        </span>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="/public/img/profile-default.png" alt="profile-default"/></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="/public/img/icon-logout.png" alt="logout"/></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile-btn" onclick="mobileOpen()">
+                    <span>MENU</span>
+                    <img src="/public/img/icon-hamberger.png" alt="mobile">
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu-open">
+            <div class="inr">
+                <div class="mobile-menu-profile">
+                    <!-- <figure><img src="/public/img/profile-default.png" alt=""/></figure> -->
+                    <div class="login-profile">
+                        <!-- <div class="before-login">로그인 및 회원가입</div> -->
+                        <div class="after-login">
+                            <span class="user-name">
+                                홍길동님!
+                                <div class="greeting">안녕하세요</div>
+                            </span>
+                            <span class="edit-profile"><a href="">프로필 변경</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-banner">
+                    하이브리드형 영어 교육 서비스, <span class="font-bold"> 하올라</span>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <strong>MENU</strong>
+                    <ul class="gnb-lists">
+                        <li class="gnb-list">
+                            <span>하올라 소개</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/Ceo.html">대표 한마디</a></li>
+                                <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="/Ceo-kr.html">한국인 대표의 고백</a></li>
+                        <li class="gnb-list">
+                            <span>하올라 프로그램</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/haollaProgram.html">하올라 프로그램</a></li>
+                                <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                                <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                                <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                        <li class="gnb-list"><a href="/inquiry.html">무료체험신청</a></li>
+                    </ul>
+                </div>
+                <span class="logout">
+                    <a href="">
+                        <figure><img src="/public/img/icon-logout.png" alt="logout"/></figure>
+                        로그아웃
+                    </a>
+                </span>
+            </div>
+            <span class="mobile-menu-dim"></span>
+            <span class="mobile-close" onclick="mobileClose()">
+                <img src="/public/img/icon-close.png" alt="close">
+            </span>
+        </div>
+    </header>
+    <!-- raon : 변경사항 -- start -->
+    <main id="main" class="sub new-sub">
+        <section class="sub-board-detail">
+            <div class="inr">
+                <div class="sub-title-wrap">
+                    <h1>자유게시판</h1>
+                    <ul class="breadscrumbs">
+                        <li class="breadscrumb">Home</li>
+                        <li class="breadscrumb">자유게시판</li>
+                    </ul>
+                </div>
+                <div class="sub-board-content">
+                    <div class="sub-board-content-top">
+                        <h2>자유게시판 샘풀 제목입니다.</h2>
+                        <span>2021. 02. 01</span>
+                    </div>
+                    <div class="sub-board-content-main">
+                        <p>
+                            이상은 같은 너의 놀이 하여도 앞이 꽃이 아니다. 장식하는 별과 돋고, 동력은 그들은 싸인 얼음이 풀이 있다. 힘차게 있음으로써 이성은 원질이 커다란 것은 청춘의 대고, 
+                            이것은 있는가? 맺어, 커다란 소금이라 같은 힘차게 거선의 칼이다. 같은 끓는 얼마나 듣는다. 온갖 새 피어나는 원대하고, 품에 예수는 희망의 약동하다. 인간은 길을 있는 간에 어디 있는가?
+                            모래뿐일 찬미를 거친 불어 방지하는 구할 못할 교향악이다. 사람은 피는 내는 우리 끓는 피다. 든 튼튼하며, 황금시대를 천하를 부패뿐이다. 
+                            <br>
+                            <br>
+                            노년에게서 방황하여도, 타오르고 말이다.사랑의 천지는 보는 내려온 그들은 힘차게 같이, 동산에는 찾아다녀도, 아름다우냐? 창공에 찬미를 얼음이 소담스러운 생명을 웅대한 열락의 것이다. 가치를 풀이 가지에 붙잡아 위하여서, 따뜻한 방지하는 피가 가슴에 있으랴? 길지 속잎나고, 무엇을 이상의 이것이다. 
+                            <br>
+                            <br>
+                            커다란 투명하되 귀는 위하여서, 불어 행복스럽고 위하여 교향악이다. 얼음이 곳이 이 청춘에서만 되려니와, 그들의 피고 철환하였는가? 얼음과 보이는 것이 들어 못하다 위하여서 싸인 청춘 아름다우냐? 구하지 없으면 갑 쓸쓸하랴? 피에 우리 꾸며 인간이 못할 약동하다.거선의 착목한는 수 투명하되 이상을 품고 피다. 
+                            <br>
+                            <br>
+                            풍부하게 위하여 물방아 인생에 위하여, 보배를 것이다. 이상의 것이다.보라, 무엇을 같이, 가는 거선의 봄바람이다. 그것은 보이는 일월과 풍부하게 예수는 우리 피가 반짝이는 것은 이것이다. 꽃이 천하를 새 기관과 예수는 것이 이것이다. 가슴에 만물은 방황하였으며, 그리하였는가? 군영과 굳세게 든 보라. 청춘은 가슴이 예수는 때문이다. 얼마나 만물은 있는 거선의 교향악이다.
+                        </p>
+                    </div>
+                    <div class="sub-board-content-bottom">
+                        <span class="btn fill d-grey">
+                            <a href="/boardList.html">목록으로</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="sub-board-comments">
+                    <span class="total-comment">총 댓글 50개</span>
+                    <div class="board-comment-write">
+                        <!-- before login -->
+                        <div class="before-login">
+                            <span>
+                                <textarea name="" id="comment-before-login" cols="30" rows="5" disabled>댓글을 작성하시려면 로그인을 해주세요.</textarea>
+                            </span>
+                        </div>
+                        <!-- after login -->
+                        <div class="after-login">
+                            <div class="comment-profile">
+                                <div class="comment-profile-left">
+                                    <figure><img src="/public/img/profile-default.png" alt=""></figure>
+                                    <span>송정원</span>
+                                </div>
+                            </div>
+                            <span>
+                                <textarea name="" id="comment-after-login" cols="30" rows="10" >건전한 토론문화과 양질의 댓글 문화를 위해, 타인에게 불쾌감을 주는 욕설 또는 특정 계층/ 민족, 종교 등을 비하하는 단어들은 표시가 제한됩니다.</textarea>
+                                <span class="writing-details">
+                                    <div class="count-num">0/200</div>
+                                    <button class="btn fill secondary">등록</button>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="board-comment-lists">
+                        <li class="board-comment-list">
+                            <div class="comment-detail">
+                                <div class="comment-profile">
+                                    <div class="comment-profile-left">
+                                        <figure><img src="/public/img/profile-default.png" alt=""></figure>
+                                        <span>송정원</span>
+                                    </div>
+                                    <div class="comment-profile-right">
+                                        <span>2021. 12. 31 16:08</span>
+                                    </div>
+                                </div>
+                                <div class="comment-content">
+                                    <p>댓글입니다.</p>
+                                </div>
+                                <div class="comment-btn-lists">
+                                    <button class="btn line primary">답글 작성</button>
+                                    <!-- 자신이 작성한 댓글의 경우 editable-btn 노출 -->
+                                    <div class="editable-btn">
+                                        <button class="btn fill secondary">수정</button>
+                                        <button class="btn fill d-grey">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="board-comment-replys">
+                                <li class="board-comment-reply">
+                                    <div class="after-login">
+                                        <div class="comment-profile">
+                                            <div class="comment-profile-left">
+                                                <figure><img src="/public/img/profile-default.png" alt=""></figure>
+                                                <span>송정원</span>
+                                            </div>
+                                        </div>
+                                        <span>
+                                            <textarea name="" id="comment-after-login" cols="30" rows="10" >건전한 토론문화과 양질의 댓글 문화를 위해, 타인에게 불쾌감을 주는 욕설 또는 특정 계층/ 민족, 종교 등을 비하하는 단어들은 표시가 제한됩니다.</textarea>
+                                            <span class="writing-details">
+                                                <div class="count-num">0/200</div>
+                                                <button class="btn fill secondary">등록</button>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="board-comment-reply">
+                                    <div class="comment-detail">
+                                        <div class="comment-profile">
+                                            <div class="comment-profile-left">
+                                                <figure><img src="/public/img/profile-default.png" alt=""></figure>
+                                                <span>송정원</span>
+                                            </div>
+                                            <div class="comment-profile-right">
+                                                <span>2021. 12. 31 16:08</span>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content">
+                                            <p>댓글입니다.</p>
+                                        </div>
+                                        <div class="comment-btn-lists">
+                                            <button class="btn line primary">답글 작성</button>
+                                            <!-- 자신이 작성한 댓글의 경우 editable-btn 노출 -->
+                                            <div class="editable-btn">
+                                                <button class="btn fill secondary">수정</button>
+                                                <button class="btn fill d-grey">삭제</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="hidden-replys">
+                                <span>답글 접기</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- raon : 변경사항 -- end -->
+    <footer>
+        <div class="inr">
+            <div class="footer-top">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="/public/img/logo-f.png" alt="logo"/></figure>
+                    </a>
+                </div>
+                <ul class="footer-sns-lists">
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-twitter.png" alt="twitter"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-facebook.png" alt="facebook"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-insta.png" alt="insta"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <ul>
+                        <li>사업자 등록번호 : 393-02-01792</li>
+                        <li>주소 : 경기도 고양시 덕양구 항기로 77, 410동 2201호 </li>
+                        <br>
+                        <li>공동대표 : Nicole Leigh Nel, 강병조 </li>
+                        <li>개인정보 책임자 : 강병조 </li>
+                        <br>
+                        <li>이메일 : joe@haolla.net </li>
+                        <li>전화 : 1533-3842 </li>
+                    </ul>
+                    <p class="copy">ⓒ 2022 Haolla hybrid online live, inc. all rights reserved</p>    
+                </div>
+                <div class="footer-right">
+                    <strong>1533-3842</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+</html>
