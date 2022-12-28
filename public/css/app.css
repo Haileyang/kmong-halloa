@@ -4130,6 +4130,190 @@ header .header-left .gnb-lists .gnb-list > a {
   -webkit-transform: rotate(-135deg);
   margin-left: 10px;
 }
+.new-sub .message-wrap {
+  display: flex;
+}
+.new-sub .message-wrap small {
+  padding: 1px 6px;
+  font-size: 12px;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+.new-sub .message-wrap small.teacher {
+  border-color: #2464EB;
+  color: #2464EB;
+}
+.new-sub .message-wrap small.admin {
+  border-color: #5620A8;
+  color: #5620A8;
+}
+.new-sub .message-wrap small.student {
+  border-color: #666;
+  color: #666;
+}
+.new-sub .message-wrap .message-left {
+  min-width: 340px;
+  margin-right: 50px;
+}
+.new-sub .message-wrap .message-left strong {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+.new-sub .message-wrap .message-left .message-lists {
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.new-sub .message-wrap .message-left .message-list {
+  width: 100%;
+  display: flex;
+  padding: 12px 10px;
+  position: relative;
+}
+.new-sub .message-wrap .message-left .message-list.recent {
+  background-color: #E9EFFD;
+}
+.new-sub .message-wrap .message-left .message-list .message-time {
+  font-size: 12px;
+  color: #888;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.new-sub .message-wrap .message-left .message-list img {
+  max-height: 50px;
+}
+.new-sub .message-wrap .message-left .message-list > span {
+  margin-left: 15px;
+}
+.new-sub .message-wrap .message-left .message-list > span > span {
+  display: flex;
+  align-items: center;
+}
+.new-sub .message-wrap .message-left .message-list > span > span .name {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.new-sub .message-wrap .message-left .message-list > span p {
+  font-size: 16px;
+  margin-top: 2px;
+}
+.new-sub .message-wrap .message-right {
+  flex: 1;
+}
+.new-sub .message-wrap .message-right .message-right-top {
+  display: flex;
+  align-items: center;
+}
+.new-sub .message-wrap .message-right .message-right-top > span {
+  display: flex;
+  align-items: center;
+}
+.new-sub .message-wrap .message-right .message-right-top .name {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.new-sub .message-wrap .message-right .message-right-top img {
+  max-height: 55px;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .message-chat-wrap {
+  height: calc(100vh - 45px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .date {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  margin: 30px 0;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .date b {
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+  font-weight: 400;
+  color: #ddd;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .date .line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble img {
+  max-height: 40px;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble p {
+  padding: 10px;
+  background-color: #eee;
+  margin-left: 10px;
+  font-size: 16px;
+  display: inline-block;
+  width: auto;
+  max-width: 80%;
+  position: relative;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble .time {
+  border: none;
+  padding: 0;
+  position: absolute;
+  right: -35px;
+  bottom: 0;
+  color: #888;
+  font-size: 12px;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble.left p {
+  border-radius: 0 10px 10px 10px;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble.right {
+  justify-content: flex-end;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble.right p {
+  border-radius: 10px 0 10px 10px;
+  background-color: #2464EB;
+  color: #fff;
+}
+.new-sub .message-wrap .message-right .message-right-bottom .chat-bubble.right .time {
+  right: unset;
+  left: -35px;
+}
+.new-sub .message-wrap .message-right .message-chat-type {
+  display: flex;
+  justify-content: space-between;
+  align-self: start;
+}
+.new-sub .message-wrap .message-right .message-chat-type textarea {
+  border: none;
+  outline: none;
+  height: 45px;
+  width: 100%;
+  margin: 0 10px;
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.new-sub .message-wrap .message-right .message-chat-type img {
+  max-height: 40px;
+}
 
 @media (max-width: 991px) {
   .new-sub .sub-admin-payment .payment-form-wrap form div {
@@ -4182,5 +4366,19 @@ header .header-left .gnb-lists .gnb-list > a {
   }
   .new-sub .sub-board-comments .board-comment-replys {
     padding: 20px 15px;
+  }
+  .new-sub .message-wrap .message-left {
+    width: 100%;
+    margin-right: 0;
+  }
+  .new-sub .message-wrap .message-left .message-lists {
+    overflow: visible;
+    max-height: 100%;
+  }
+  .new-sub .message-wrap .message-left strong {
+    font-size: 20px;
+  }
+  .new-sub .message-wrap .message-right {
+    display: none;
   }
 }/*# sourceMappingURL=app.css.map */
