@@ -1,16 +1,24 @@
 .new-sub{
     .btn{
-        padding: 20px 60px;
+        padding: 15px 30px;
         border-radius: 50px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         text-align: center;
         outline: none;
         &.fill{
             color: #fff;
+            a{
+                color: inherit;
+            }
             &.primary{
-                background-color: $color-primary;
-                
+                background-color: $color-primary;   
+            }
+            &.secondary{
+                background-color: $color-secondary;   
+            }
+            &.d-grey{
+                background-color: #888;
             }
             &:hover {
                 opacity: 0.8;
@@ -18,6 +26,7 @@
         }
         &.line{
             color:$color-primary;
+            background-color: transparent;
             &.primary{
                 border-color: $color-primary;
             }
@@ -85,9 +94,6 @@
         li {
             .btn{
                 padding: 15px 40px;
-                &.d-grey{
-                    background-color: #888;
-                }
             }
             & + li{
                 margin-left: 10px;
@@ -305,6 +311,135 @@
             }
         }
     }
+    .sub-board-content{
+        .sub-board-content-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #eee;
+            h2{
+                font-size: 25px;
+                margin-bottom: 0!important;
+            }
+            span{
+                font-size: 16px;
+                color: #888;
+            }
+        }
+        .sub-board-content-main{
+            p{
+                font-size: 16px;
+                line-height: 1.5;
+                color: #444;
+            }
+        }
+        .sub-board-content-bottom{
+            margin: 80px 0;
+            text-align: center;
+        }
+    }
+    .sub-board-comments{
+        .btn{
+            font-size: 14px;
+            padding: 5px 15px!important;
+        }
+        .total-comment{
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        textarea{
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 15px;
+            color: #444;
+            &#comment-before-login{
+                height: 60px;
+                overflow: hidden;
+            }
+            &:disabled{
+                color: #ccc;
+            }
+        }
+        .board-comment-write{
+            margin-bottom: 50px;
+        }
+        .after-login{
+            position: relative;
+        }
+        .comment-profile{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .comment-profile-left{
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 10px;
+                    display: block;
+                }
+                img{
+                    max-height: 40px;
+                }
+            }
+            .comment-profile-right{
+                span{
+                    color: #888;
+                }
+            }
+        }
+        .writing-details{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 15px; bottom: 15px;
+            .count-num{
+                color: #666;
+                margin-right: 10px;
+            }
+        }
+        .comment-btn-lists{
+            margin-top: 20px;
+            display: flex;
+            .editable-btn{
+                margin-left: 5px;
+            }
+        }
+        .board-comment-list,
+        .board-comment-reply,
+        .comment-detail{
+            margin-bottom: 30px;
+        }
+        .board-comment-replys{
+            background-color: #F6F3F9;
+            padding: 35px;
+            textarea{
+                background-color: #fff;
+            }
+        }
+        .hidden-replys{
+            background-color: #F6F3F9;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            &::after{
+                content: "";
+                border: solid black;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                margin-left: 10px;
+            }
+        }
+    }
 }
 @media(max-width: 991px) {
     .new-sub{
@@ -334,7 +469,7 @@
 @media(max-width: 767px) {
     .new-sub {
         .btn{
-            padding: 15px 30px;
+            padding: 10px 25px!important;
             font-size: 18px;
         }
         .filtering-wrap {
@@ -361,5 +496,21 @@
                 }
             }
        }
+       .sub-board-content{
+            .sub-board-content-top{
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+                display: block;
+                h2{
+                    font-size: 20px!important;
+                    margin-bottom: 5px!important;
+                }
+            }
+        }
+        .sub-board-comments {
+            .board-comment-replys{
+                padding: 20px 15px;
+            }
+        }
     }
 }
