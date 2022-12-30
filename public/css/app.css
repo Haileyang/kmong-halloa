@@ -4073,6 +4073,7 @@ header .header-left .gnb-lists .gnb-list > a {
 .new-sub .sub-board-comments .comment-profile .comment-profile-left {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .new-sub .sub-board-comments .comment-profile .comment-profile-left span {
   margin-left: 10px;
@@ -4080,6 +4081,30 @@ header .header-left .gnb-lists .gnb-list > a {
 }
 .new-sub .sub-board-comments .comment-profile .comment-profile-left img {
   max-height: 40px;
+}
+.new-sub .sub-board-comments .comment-profile .comment-profile-left .comment-profile-tooltip {
+  display: none;
+  position: absolute;
+  left: 50px;
+  top: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+.new-sub .sub-board-comments .comment-profile .comment-profile-left .comment-profile-tooltip.active {
+  display: block;
+}
+.new-sub .sub-board-comments .comment-profile .comment-profile-left .comment-profile-tooltip .profile-tooltip-lists li {
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}
+.new-sub .sub-board-comments .comment-profile .comment-profile-left .comment-profile-tooltip .profile-tooltip-lists li:hover {
+  text-decoration: underline;
+}
+.new-sub .sub-board-comments .comment-profile .comment-profile-left .comment-profile-tooltip .profile-tooltip-lists li + li {
+  margin-top: 10px;
 }
 .new-sub .sub-board-comments .comment-profile .comment-profile-right span {
   color: #888;

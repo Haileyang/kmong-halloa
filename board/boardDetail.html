@@ -198,9 +198,19 @@
                         </p>
                     </div>
                     <div class="sub-board-content-bottom">
-                        <span class="btn fill d-grey">
-                            <a href="/boardList.html">목록으로</a>
-                        </span>
+                        <ul class="btn-lists">
+                            <li class="btn-list">
+                                <span class="btn fill primary">
+                                    <a href="/boardList.html">목록으로</a>
+                                </span>
+                            </li>
+                            <li class="btn-list">
+                                <button class="btn fill d-grey">삭제</button>
+                            </li>
+                            <li class="btn-list">
+                                <button class="btn fill secondary">수정</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="sub-board-comments">
@@ -233,9 +243,15 @@
                         <li class="board-comment-list">
                             <div class="comment-detail">
                                 <div class="comment-profile">
-                                    <div class="comment-profile-left">
+                                    <div class="comment-profile-left" onclick="profileTooltip(event)">
                                         <figure><img src="/public/img/profile-default.png" alt=""></figure>
                                         <span>송정원</span>
+                                        <div class="comment-profile-tooltip">
+                                            <ul class="profile-tooltip-lists">
+                                                <li class="profile-tooltip-list">프로필보기</li>
+                                                <li class="profile-tooltip-list">1:1 대화하기</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="comment-profile-right">
                                         <span>2021. 12. 31 16:08</span>
@@ -257,9 +273,15 @@
                                 <li class="board-comment-reply">
                                     <div class="after-login">
                                         <div class="comment-profile">
-                                            <div class="comment-profile-left">
+                                            <div class="comment-profile-left" onclick="profileTooltip(event)">
                                                 <figure><img src="/public/img/profile-default.png" alt=""></figure>
                                                 <span>송정원</span>
+                                                <div class="comment-profile-tooltip">
+                                                    <ul class="profile-tooltip-lists">
+                                                        <li class="profile-tooltip-list">프로필보기</li>
+                                                        <li class="profile-tooltip-list">1:1 대화하기</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                         <span>
@@ -274,9 +296,15 @@
                                 <li class="board-comment-reply">
                                     <div class="comment-detail">
                                         <div class="comment-profile">
-                                            <div class="comment-profile-left">
+                                            <div class="comment-profile-left" onclick="profileTooltip(event)">
                                                 <figure><img src="/public/img/profile-default.png" alt=""></figure>
                                                 <span>송정원</span>
+                                                <div class="comment-profile-tooltip">
+                                                    <ul class="profile-tooltip-lists">
+                                                        <li class="profile-tooltip-list">프로필보기</li>
+                                                        <li class="profile-tooltip-list">1:1 대화하기</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <div class="comment-profile-right">
                                                 <span>2021. 12. 31 16:08</span>
@@ -347,6 +375,16 @@
         </div>
     </footer>
    
+    <script>
+        // TOOLTIP PROFILE 
+        function profileTooltip(event){
+            const targetParent = event.target.parentElement;
+            const tooltip = targetParent.querySelector('.comment-profile-tooltip')
+            if(targetParent.classList.contains('comment-profile-left')){
+                tooltip.classList.toggle('active')
+            }
+        }
+    </script>
 </body>
 
 </html>
