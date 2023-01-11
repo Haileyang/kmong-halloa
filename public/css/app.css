@@ -4314,6 +4314,42 @@ header .header-left .gnb-lists .gnb-list > a {
 .new-sub .message-wrap .message-right .message-chat-type img {
   max-height: 40px;
 }
+.new-sub .payment-done-wrap {
+  display: flex;
+  align-items: center;
+}
+.new-sub .payment-done-wrap .payment-done-left {
+  margin-bottom: 50px;
+  flex: 1;
+}
+.new-sub .payment-done-wrap .payment-done-left h2 {
+  font-size: 40px !important;
+  font-weight: 300 !important;
+  margin-bottom: 30px !important;
+}
+.new-sub .payment-done-wrap .payment-done-left h2 .color-primary {
+  font-weight: 500;
+}
+.new-sub .payment-done-wrap .payment-done-left p {
+  font-size: 18px;
+  color: #888;
+  line-height: 1.5;
+}
+.new-sub .payment-done-wrap .payment-done-left .payment-done-btns {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.new-sub .payment-done-wrap .payment-done-left .payment-done-btns li {
+  margin-right: 10px;
+}
+.new-sub .payment-done-wrap .payment-done-right {
+  flex: 1;
+}
+.new-sub .payment-done-wrap .payment-done-right img {
+  width: 100%;
+  max-height: 630px;
+}
 
 @media (max-width: 991px) {
   .new-sub .sub-admin-payment .payment-form-wrap form div {
@@ -4330,6 +4366,15 @@ header .header-left .gnb-lists .gnb-list > a {
     line-height: 20px;
     margin-left: 15px;
     margin-bottom: 15px;
+  }
+  .new-sub .payment-done-wrap .payment-done-left h2 {
+    font-size: 30px !important;
+  }
+  .new-sub .payment-done-wrap .payment-done-left p {
+    font-size: 14px;
+  }
+  .new-sub .payment-done-wrap .payment-done-left .payment-done-btns {
+    margin-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -4380,5 +4425,15 @@ header .header-left .gnb-lists .gnb-list > a {
   }
   .new-sub .message-wrap .message-right {
     display: none;
+  }
+  .new-sub .payment-done-wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .new-sub .payment-done-wrap .payment-done-right img {
+    max-height: 300px;
+  }
+  .new-sub .payment-done-wrap .payment-done-btns {
+    justify-content: center;
   }
 }/*# sourceMappingURL=app.css.map */
