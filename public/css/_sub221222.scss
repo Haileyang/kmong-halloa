@@ -52,6 +52,8 @@
         }
         >span {
             display: flex;
+            align-items: center;
+            min-height: 60px;
             button {
                 max-width: 126px;
                 font-size: 16px;
@@ -70,7 +72,8 @@
                 }
             }
         }
-        input[type=text] {
+        input[type=text]
+        ,select {
             padding: 20px 16px;
             background-color: #f7f7f7;
             border-radius: 70px;
@@ -78,6 +81,13 @@
             outline: none;
             width: 100%;
             display: block;
+        }
+        select{
+           appearance: none; 
+           background-image: url(/public/img/select-arrow-down.png);
+           background-size: 14px 7px;
+           background-repeat: no-repeat;
+           background-position: 96%;
         }
         small {
             display: block;
@@ -659,6 +669,138 @@
             img{
                 width: 100%;
                 max-height: 630px
+            }
+        }
+    }
+    .profile-content{
+        .profile-top{
+            display: flex;
+            justify-content: space-between;
+            .profile-top-left{
+                display: flex;
+                align-items: center;
+                .profile-pic{
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 20px;
+                    position: relative;
+                    cursor: pointer;
+                    &:hover{
+                        .hover{
+                            display: block;
+                        }
+                    }
+                    img{
+                        position: absolute;
+                        left: 0; top: 0;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                    .hover{
+                        display: none;
+                    }
+                }
+                strong{
+                    font-size: 25px;
+                    font-weight: 500;
+                }
+            }
+            .btn{
+                padding: 12px 30px;
+            }
+        }
+        .profile-sections{
+            margin-top: 40px;
+            .profile-section{
+                .profile-section-tit{
+                    font-size: 20px;
+                    margin-bottom: 30px;
+                }
+                & + .profile-section {
+                    margin-top: 50px;
+                }
+            }
+            .input-flex-layout{
+                display: flex;
+                flex-flow: row wrap;
+                display: flex;
+                justify-content: space-between;
+                input[type=text]{
+                    flex: 1;
+                }
+                .checkbox-wrap{
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                }
+                .profile-character{
+                    .checkbox-wrap{
+                        display: block;
+                        margin-bottom: 20px;
+                        .custom-checkbox{
+                            & + .custom-checkbox{
+                                margin-left: 0;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                .input-wrap{
+                    width: calc(100%/2 - 30px);
+                    small{
+                        padding: 0;
+                        color: #888;
+                    }
+                    >label{
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                    }
+                    .custom-checkbox{
+                        margin: 0;
+                        // min-width: 50px;
+                        flex: 1;
+                        align-items: center;
+                        & +.custom-checkbox{
+                            margin-left: 10px;
+                        }
+                        label{
+                            font-weight: 400;
+                        }
+                    }
+                    select{
+                        flex: 1;
+                        & + select{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .eng-level{
+                    margin-bottom: 10px;
+                    strong{
+                        min-width: 80px;
+                        font-weight: 400;
+                    }
+                    .checkbox-wrap{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .prefer-input-wrap{
+                    width: calc(50% - 30px);
+                    >label{
+                        margin-bottom: 20px;
+                    }
+                    .input-wrap{
+                        width: 100%;
+                        height: 60px;
+                        label{
+                            margin-right: 20px;
+                            min-width: 50px;
+                        }
+                    }
+                }
             }
         }
     }
