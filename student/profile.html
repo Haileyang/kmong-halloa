@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하올라 - 학생정보</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/public/css/app.css">
+    <script defer src="/public/js/main.js"></script> 
+</head>
+
+<body>
+    <header id="header">
+        <div class="inr">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="/public/img/logo.png" alt="logo"/></figure>
+                    </a>
+                </div>
+                <ul class="gnb-lists">
+                    <li class="gnb-list">
+                        <span>하올라 소개</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/Ceo.html">대표 한마디</a></li>
+                            <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="/Ceo-kr.html">한국인 대표의 고백</a></li>
+                    <li class="gnb-list">
+                        <span>하올라 프로그램</span>
+                        <ul class="lnb-lists">
+                            <li class="lnb-list"><a href="/haollaProgram.html">하올라 프로그램</a></li>
+                            <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                            <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                            <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                    <li class="gnb-list"><a href="/inquiry.html">무료체험신청</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div class="login-status">
+                    <!-- <div class="before-login">
+                        <span class="btn fill">
+                            <a href="">로그인</a>
+                        </span>
+                    </div> -->
+                    <div class="after-login">
+                        <!-- <figure class="profile"><img src="public/img/profile-default.png" alt="profile-default"/></figure> -->
+                        <span class="user-name" onclick="loginMypageToggle()">
+                            <strong>홍길동</strong>님
+                        </span>
+                        <div class="after-login-menu">
+                            <ul class="login-mypage-menus">
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 01
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 02
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 03
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 04
+                                    </a>
+                                </li>
+                                <li class="login-mypage-menu">
+                                    <a href="">
+                                        <figure><img src="" alt=""/></figure>
+                                        menu 05
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="logout">
+                                <a href="">
+                                    <figure><img src="/public/img/icon-logout.png" alt="logout"/></figure>
+                                    로그아웃
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="mobile-btn" onclick="mobileOpen()">
+                    <span>MENU</span>
+                    <img src="/public/img/icon-hamberger.png" alt="mobile">
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu-open">
+            <div class="inr">
+                <div class="mobile-menu-profile">
+                    <!-- <figure><img src="public/img/profile-default.png" alt=""/></figure> -->
+                    <div class="login-profile">
+                        <!-- <div class="before-login">로그인 및 회원가입</div> -->
+                        <div class="after-login">
+                            <span class="user-name">
+                                홍길동님!
+                                <div class="greeting">안녕하세요</div>
+                            </span>
+                            <span class="edit-profile"><a href="">프로필 변경</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-banner">
+                    하이브리드형 영어 교육 서비스, <span class="font-bold"> 하올라</span>
+                </div>
+                <div class="mobile-menu-wrap">
+                    <strong>MENU</strong>
+                    <ul class="gnb-lists">
+                        <li class="gnb-list">
+                            <span>하올라 소개</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/Ceo.html">대표 한마디</a></li>
+                                <li class="lnb-list"><a href="/mission.html">미션&비전</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="/Ceo-kr.html">한국인 대표의 고백</a></li>
+                        <li class="gnb-list">
+                            <span>하올라 프로그램</span>
+                            <ul class="lnb-lists">
+                                <li class="lnb-list"><a href="/haollaProgram.html">하올라 프로그램</a></li>
+                                <li class="lnb-list"><a href="/program.html">제공프로그램</a></li>
+                                <li class="lnb-list"><a href="/smallGroup.html">소규모 화상 그룹수업의 효과</a></li>
+                                <li class="lnb-list"><a href="/IBvsLocal.html">IB 국제학교 VS 한국식 영어교육</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-list"><a href="">그룹원 찾기</a></li>
+                        <li class="gnb-list"><a href="/inquiry.html">무료체험신청</a></li>
+                    </ul>
+                </div>
+                <span class="logout">
+                    <a href="">
+                        <figure><img src="public/img/icon-logout.png" alt="logout"/></figure>
+                        로그아웃
+                    </a>
+                </span>
+            </div>
+            <span class="mobile-menu-dim"></span>
+            <span class="mobile-close" onclick="mobileClose()">
+                <img src="/public/img/icon-close.png" alt="close">
+            </span>
+        </div>
+    </header>
+    <!-- raon : 변경사항 -- start -->
+    <main id="main" class="sub new-sub">
+        <section class="sub-student-profile">
+            <div class="inr">
+                <div class="sub-title-wrap">
+                    <h1>학생정보</h1>
+                    <ul class="breadscrumbs">
+                        <li class="breadscrumb">Home</li>
+                        <li class="breadscrumb">마이페이지</li>
+                        <li class="breadscrumb">학생정보</li>
+                    </ul>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-top">
+                        <div class="profile-top-left">
+                            <!-- TODO : 프로필 호버 시, 프로필 업데이트 Hook 노출/ 클릭 시, 프로필 업로드 기능 -->
+                            <figure class="profile-pic">
+                                <img src="/public/img/profile-default.png" alt="">
+                                <img class="hover" src="/public/img/profile-edit.png" alt="edit-profile">
+                            </figure>
+                            <strong>홍길동</strong>
+                        </div>
+                        <div class="profile-top-right">
+                            <ul class="btn-lists">
+                                <li class="btn-list">
+                                    <button class="btn fill primary">수정</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="profile-sections">
+                        <form action="">
+                            <!-- 기본정보 -->
+                            <div class="profile-section">
+                                <h3 class="profile-section-tit">기본정보</h3>
+                                <div class="input-flex-layout">
+                                    <span class="input-wrap">
+                                        <label for="">학생 학년</label>
+                                        <span>
+                                            <select name="schoolType" id="schoolType">
+                                                <option value="">고등학교</option>
+                                                <option value="">중학교</option>
+                                                <option value="">초등학교</option>
+                                            </select>
+                                            <select name="schoolGrad" id="schoolGrad">
+                                                <!-- TODO : 학교 형태에 따라 옵션 다르게 노출 -->
+                                                <option value="">1학년</option>
+                                                <option value="">2학년</option>
+                                                <option value="">3학년</option>
+                                                <option value="">4학년</option>
+                                                <option value="">5학년</option>
+                                                <option value="">6학년</option>
+                                            </select>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">현재 재학 중인 학교 형태</label>
+                                        <select name="schoolType" id="schoolType">
+                                            <!-- TODO : 옵션값은 임의로 지정했습니다. -->
+                                            <option value="">일반고</option>
+                                            <option value="">자율고</option>
+                                            <option value="">특성화고</option>
+                                            <option value="">특목고</option>
+                                        </select>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">학생 나이</label>
+                                        <select name="schoolType" id="schoolType">
+                                            <!-- TODO : 옵션값은 임의로 지정했습니다. -->
+                                            <option value="">2010년</option>
+                                            <option value="">2009년</option>
+                                            <option value="">2008년</option>
+                                            <option value="">2007년</option>
+                                            <option value="">2006년</option>
+                                            <option value="">2005년</option>
+                                            <option value="">2004년</option>
+                                        </select>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">수업 가능 요일 (중복선택가능)</label>
+                                        <span class="checkbox-wrap">
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-mon" value=''>
+                                                <label for="check-mon">
+                                                    <span class="label-txt">월</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-tue" value=''>
+                                                <label for="check-tue">
+                                                    <span class="label-txt">화</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" name="check-Writing" id="check-wed" value=''>
+                                                <label for="check-wed">
+                                                    <span class="label-txt">수</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-thu" value=''>
+                                                <label for="check-thu">
+                                                    <span class="label-txt">목</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fri" value=''>
+                                                <label for="check-fri">
+                                                    <span class="label-txt">금</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-sat" value=''>
+                                                <label for="check-sat">
+                                                    <span class="label-txt">토</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-sun" value=''>
+                                                <label for="check-sun">
+                                                    <span class="label-txt">일</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">학생 성별</label>
+                                        <span class="checkbox-wrap">
+                                            <span class="custom-checkbox">
+                                                <input type="radio" name="check-gender" id="check-male" value=''>
+                                                <label for="check-male">
+                                                    <span class="label-txt">남</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="radio" name="check-gender" id="check-female" value=''>
+                                                <label for="check-female">
+                                                    <span class="label-txt">여</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">수업가능시간</label>
+                                        <input type="text" placeholder="예. 14:00 - 21:00">
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 학습정보 -->
+                            <div class="profile-section">
+                                <h3 class="profile-section-tit">학습정보</h3>
+                                <div class="input-flex-layout">
+                                    <span class="input-wrap">
+                                        <label for="">공부 목적 또는 목표</label>
+                                        <input type="text" placeholder="(중, 고등 내신 준비 / 수능영어 / 토플 / 국제중, 국제학교 입시준비...)">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">SR 지수</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">현재 읽고 있는 원서 AR 지수</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">최근에 공부했던 영어 교재 정보</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">학원 수강 이력 정보</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">영어유치원 경험</label>
+                                        <span class="checkbox-wrap">
+                                            <span class="custom-checkbox">
+                                                <input type="radio" name="check-engKdg" id="check-yes" value=''>
+                                                <label for="check-yes">
+                                                    <span class="label-txt">예</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="radio" name="check-engKdg" id="check-no" value=''>
+                                                <label for="check-no">
+                                                    <span class="label-txt">아니오</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">유학(해외) 경험</label>
+                                        <span>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-abroad" id="check-yes" value=''>
+                                                    <label for="check-yes">
+                                                        <span class="label-txt">예</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-abroad" id="check-no" value=''>
+                                                    <label for="check-no">
+                                                        <span class="label-txt">아니오</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <input type="text">
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">학생의 영어 수준을 가늠할 수 있는 기타 정보</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">학원 수강 이력 정보</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">영어 관련 시험성적</label>
+                                        <span>
+                                            <select>
+                                                <!-- TODO : 옵션값은 임의로 지정했습니다. -->
+                                                <option value="">SAT</option>
+                                                <option value="">SAT</option>
+                                            </select>
+                                            <input type="text">
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">영어 영역별 수준</label>
+                                        <span class="eng-level">
+                                            <strong>리딩</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Reading" id="check-R1" value=''>
+                                                    <label for="check-R1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Reading" id="check-R2" value=''>
+                                                    <label for="check-R2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Reading" id="check-R3" value=''>
+                                                    <label for="check-R3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Reading" id="check-R4" value=''>
+                                                    <label for="check-R4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Reading" id="check-R5" value=''>
+                                                    <label for="check-R5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="eng-level">
+                                            <strong>리스닝</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Listening" id="check-L1" value=''>
+                                                    <label for="check-L1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Listening" id="check-L2" value=''>
+                                                    <label for="check-L2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Listening" id="check-L3" value=''>
+                                                    <label for="check-L3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Listening" id="check-L4" value=''>
+                                                    <label for="check-L4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Listening" id="check-L5" value=''>
+                                                    <label for="check-L5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="eng-level">
+                                            <strong>라이팅</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Writing" id="check-W1" value=''>
+                                                    <label for="check-W1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Writing" id="check-W2" value=''>
+                                                    <label for="check-W2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Writing" id="check-W3" value=''>
+                                                    <label for="check-W3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Writing" id="check-W4" value=''>
+                                                    <label for="check-W4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Writing" id="check-W5" value=''>
+                                                    <label for="check-W5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="eng-level">
+                                            <strong>어휘</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Vocab" id="check-V1" value=''>
+                                                    <label for="check-V1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Vocab" id="check-V2" value=''>
+                                                    <label for="check-V2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Vocab" id="check-V3" value=''>
+                                                    <label for="check-V3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Vocab" id="check-V4" value=''>
+                                                    <label for="check-V4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Vocab" id="check-V5" value=''>
+                                                    <label for="check-V5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="eng-level">
+                                            <strong>문법</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Grammar" id="check-G1" value=''>
+                                                    <label for="check-G1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Grammar" id="check-G2" value=''>
+                                                    <label for="check-G2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Grammar" id="check-G3" value=''>
+                                                    <label for="check-G3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Grammar" id="check-G4" value=''>
+                                                    <label for="check-G4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="radio" name="check-Grammar" id="check-G5" value=''>
+                                                    <label for="check-G5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="eng-level">
+                                            <strong>스피킹</strong>
+                                            <span class="checkbox-wrap">
+                                                <span class="custom-checkbox">
+                                                    <input type="checkbox" id="check-S1" value=''>
+                                                    <label for="check-S1">
+                                                        <span class="label-txt">1</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="checkbox" id="check-S2" value=''>
+                                                    <label for="check-S2">
+                                                        <span class="label-txt">2</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="checkbox" id="check-S3" value=''>
+                                                    <label for="check-S3">
+                                                        <span class="label-txt">3</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="checkbox" id="check-S4" value=''>
+                                                    <label for="check-S4">
+                                                        <span class="label-txt">4</span>
+                                                    </label>
+                                                </span>
+                                                <span class="custom-checkbox">
+                                                    <input type="checkbox" id="check-S5" value=''>
+                                                    <label for="check-S5">
+                                                        <span class="label-txt">5</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap profile-character">
+                                        <label for="">학생의 공부 성향 및 성격을 알 수 있는 정보 (중복선택가능)</label>
+                                        <span class="checkbox-wrap">
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study01" value=''>
+                                                <label for="check-fav-study01">
+                                                    <span class="label-txt">혼자 공부하는 것이 좋아요 </span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study02" value=''>
+                                                <label for="check-fav-study02">
+                                                    <span class="label-txt">친구들과 함께 공부하는 것이 좋아요 </span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study03" value=''>
+                                                <label for="check-fav-study03">
+                                                    <span class="label-txt">선생님의 가이드가 필요해요 </span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study04" value=''>
+                                                <label for="check-fav-study04">
+                                                    <span class="label-txt">자율적으로 공부하는 것을 좋아해요 </span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study05" value=''>
+                                                <label for="check-fav-study05">
+                                                    <span class="label-txt">수동적으로 공부해요 </span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-fav-study06" value=''>
+                                                <label for="check-fav-study06">
+                                                    <span class="label-txt">능동적으로 공부해요  </span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                        <input type="text" placeholder="기타 성향을 입력해주세요.">
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 선호/성향정보 -->
+                            <div class="profile-section">
+                                <h3 class="profile-section-tit">선호/성향정보</h3>
+                                <div class="input-flex-layout">
+                                    <span class="input-wrap">
+                                        <label for="">선호하는 수업 형태 (중복선택가능)</label>
+                                        <span class="checkbox-wrap">
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-lecture-type01" value=''>
+                                                <label for="check-lecture-type01">
+                                                    <span class="label-txt">개인</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-lecture-type02" value=''>
+                                                <label for="check-lecture-type02">
+                                                    <span class="label-txt">그룹</span>
+                                                </label>
+                                            </span>
+                                            <span class="custom-checkbox">
+                                                <input type="checkbox" id="check-lecture-type03" value=''>
+                                                <label for="check-lecture-type03">
+                                                    <span class="label-txt">3인 그룹</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">기타사항</label>
+                                        <input type="text">
+                                    </span>
+                                    <span class="prefer-input-wrap">
+                                        <label for="">선호하는 선생님 유형 또는 선생님 이름</label>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">성별</label>
+                                                <span class="checkbox-wrap">
+                                                    <span class="custom-checkbox">
+                                                        <input type="radio" name="check-gender" id="check-male" value=''>
+                                                        <label for="check-male">
+                                                            <span class="label-txt">남</span>
+                                                        </label>
+                                                    </span>
+                                                    <span class="custom-checkbox">
+                                                        <input type="radio" name="check-gender" id="check-female" value=''>
+                                                        <label for="check-female">
+                                                            <span class="label-txt">여</span>
+                                                        </label>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">나이</label>
+                                                <select name="" id="">
+                                                    <option value="">20대</option>
+                                                    <option value="">30대</option>
+                                                    <option value="">40대</option>
+                                                    <option value="">50대</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">성격</label>
+                                                <select name="" id="">
+                                                    <option value="">꼼꼼한스타일</option>
+                                                    <option value="">엄격한스타일</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">이름</label>
+                                                <input type="text">
+                                            </span>
+                                            <small>
+                                                특정 선생님과의 수업을 원하실 경우, 
+                                                하올라 고객센터 또는 특정 선생님과의 상담을 통해서 수업 스케줄을 먼저 확인해보세요.
+                                            </small>
+                                        </span>
+                                    </span>
+                                    <span class="prefer-input-wrap">
+                                        <label for="">선호하는 스터디 메이트 유형</label>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">성별</label>
+                                                <span class="checkbox-wrap">
+                                                    <span class="custom-checkbox">
+                                                        <input type="radio" name="check-gender" id="check-male" value=''>
+                                                        <label for="check-male">
+                                                            <span class="label-txt">남</span>
+                                                        </label>
+                                                    </span>
+                                                    <span class="custom-checkbox">
+                                                        <input type="radio" name="check-gender" id="check-female" value=''>
+                                                        <label for="check-female">
+                                                            <span class="label-txt">여</span>
+                                                        </label>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">학년</label>
+                                                <select name="" id="">
+                                                    <option value="">고등학교 전학년</option>
+                                                    <option value="">고등학교 3학년</option>
+                                                    <option value="">고등학교 2학년</option>
+                                                    <option value="">고등학교 1학년</option>
+                                                    <option value="">중학교 전학년</option>
+                                                    <option value="">중학교 3학년</option>
+                                                    <option value="">중학교 2학년</option>
+                                                    <option value="">중학교 1학년</option>
+                                                    <option value="">초등학교 고학년</option>
+                                                    <option value="">초등학교 저학년</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">성격</label>
+                                                <select name="" id="">
+                                                    <option value="">꼼꼼한스타일</option>
+                                                    <option value="">엄격한스타일</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">공부목적</label>
+                                                <select name="" id="">
+                                                    <option value="">내신 성적 향상</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                        <span class="input-wrap">
+                                            <span>
+                                                <label for="">영어수준</label>
+                                                <select name="" id="">
+                                                    <option value="">초급</option>
+                                                    <option value="">중급</option>
+                                                    <option value="">고급</option>
+                                                </select>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="input-wrap">
+                                        <label for="">선호하는 구체적인 커리쿨럼 정보</label>
+                                        <input type="text">
+                                        <small>예: 하올라 통합형 영어교육 프로그램 또는 기타 맞춤형 커리큘럼 정보 / * 하올라는 학생 수업 확정 시, 특정 학생과 반에 최적화된 커리큘럼을 제시해주고 있습니다. 혹시라도 중요하게 생각하시는 특정 영역이나 선호하시는 맞춤형 커리큘럼 안을 가지고 계시다면 여기에 기재해주세요.</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- raon : 변경사항 -- end -->
+    <footer>
+        <div class="inr">
+            <div class="footer-top">
+                <div class="logo-wrap">
+                    <a href="/index.html">
+                        <figure class="logo"><img src="/public/img/logo-f.png" alt="logo"/></figure>
+                    </a>
+                </div>
+                <ul class="footer-sns-lists">
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-twitter.png" alt="twitter"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-facebook.png" alt="facebook"></a>
+                    </li>
+                    <li class="footer-sns-list">
+                        <a href=""><img src="/public/img/icon-insta.png" alt="insta"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <ul>
+                        <li>사업자 등록번호 : 393-02-01792</li>
+                        <li>주소 : 경기도 고양시 덕양구 항기로 77, 410동 2201호 </li>
+                        <br>
+                        <li>공동대표 : Nicole Leigh Nel, 강병조 </li>
+                        <li>개인정보 책임자 : 강병조 </li>
+                        <br>
+                        <li>이메일 : joe@haolla.net </li>
+                        <li>전화 : 1533-3842 </li>
+                    </ul>
+                    <p class="copy">ⓒ 2022 Haolla hybrid online live, inc. all rights reserved</p>    
+                </div>
+                <div class="footer-right">
+                    <strong>1533-3842</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+</html>

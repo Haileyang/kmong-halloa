@@ -211,7 +211,7 @@ a {
             color: #888!important;
         }
     }
-    input[type="checkbox"] {
+    input {
         width: 0;
         height: 0;
         opacity: 0;
@@ -221,7 +221,7 @@ a {
         z-index: 10000;
         cursor: pointer;
     }
-    input[type="checkbox"]+label {
+    input+label {
         display: inline-block;
         position: absolute;
         left: 0;
@@ -232,10 +232,10 @@ a {
         font-size: 15px;
         width: 100%;
     }
-    input[type="checkbox"]:checked+label:before {
+    input:checked+label:before {
         background-color: $color-primary;
     }
-    input[type="checkbox"]+label:before {
+    input+label:before {
         content: ' ';
         content: " ";
         display: inline-block;
@@ -375,7 +375,7 @@ header {
             .after-login-menu {
                 display: none;
                 position: absolute;
-                width: 260px;
+                width: 160px;
                 right: 0;
                 top: 70px;
                 background-color: #fff;
@@ -412,6 +412,28 @@ header {
                 display: block;
                 img {
                     max-height: 24px;
+                }
+            }
+        }
+    }
+    .gnb-tab-content{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    .gnb-tab-lists{
+        display: flex;
+        align-items: center;
+        li{
+            padding: 15px 10px;
+            flex: 1;
+            text-align: center;
+            border-bottom: 2px solid  #f7f7f7;
+            &.active{
+                border-bottom: 2px solid  $color-primary;
+                strong{
+                    color: $color-primary;
                 }
             }
         }
@@ -489,7 +511,6 @@ header {
         }
         .mobile-menu-wrap {
             margin-top: 35px;
-            padding: 0 16px;
             strong {
                 font-size: 16px;
                 font-weight: 500;
@@ -498,6 +519,7 @@ header {
             .gnb-lists {
                 display: block;
                 margin-top: 10px;
+                padding: 0 16px;
                 .gnb-list {
                     >span,
                     >a {
