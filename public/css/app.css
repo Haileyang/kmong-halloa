@@ -418,7 +418,7 @@ header .header-right .after-login img {
 header .header-right .after-login .after-login-menu {
   display: none;
   position: absolute;
-  width: 260px;
+  width: 160px;
   right: 0;
   top: 70px;
   background-color: #fff;
@@ -456,6 +456,28 @@ header .header-right .after-login .logout {
 }
 header .header-right .after-login .logout img {
   max-height: 24px;
+}
+header .gnb-tab-content {
+  display: none;
+}
+header .gnb-tab-content.active {
+  display: block;
+}
+header .gnb-tab-lists {
+  display: flex;
+  align-items: center;
+}
+header .gnb-tab-lists li {
+  padding: 15px 10px;
+  flex: 1;
+  text-align: center;
+  border-bottom: 2px solid #f7f7f7;
+}
+header .gnb-tab-lists li.active {
+  border-bottom: 2px solid #2464EB;
+}
+header .gnb-tab-lists li.active strong {
+  color: #2464EB;
 }
 header .mobile-menu-open {
   position: fixed;
@@ -527,7 +549,6 @@ header .mobile-menu-open .mobile-menu-banner {
 }
 header .mobile-menu-open .mobile-menu-wrap {
   margin-top: 35px;
-  padding: 0 16px;
 }
 header .mobile-menu-open .mobile-menu-wrap strong {
   font-size: 16px;
@@ -537,6 +558,7 @@ header .mobile-menu-open .mobile-menu-wrap strong {
 header .mobile-menu-open .mobile-menu-wrap .gnb-lists {
   display: block;
   margin-top: 10px;
+  padding: 0 16px;
 }
 header .mobile-menu-open .mobile-menu-wrap .gnb-lists .gnb-list > span,
 header .mobile-menu-open .mobile-menu-wrap .gnb-lists .gnb-list > a {
