@@ -4483,9 +4483,6 @@ header .header-left .gnb-lists .gnb-list > a {
 .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap select {
   flex: 1;
 }
-.new-sub .profile-content .profile-sections .input-flex-layout .input-wrap select + select {
-  margin-left: 10px;
-}
 .new-sub .profile-content .profile-sections .input-flex-layout .eng-level {
   margin-bottom: 10px;
 }
