@@ -4433,6 +4433,16 @@ header .header-left .gnb-lists .gnb-list > a {
 .new-sub .profile-content .profile-sections .profile-section + .profile-section {
   margin-top: 50px;
 }
+.new-sub .profile-content .profile-sections .input-wrap textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  outline: none;
+}
 .new-sub .profile-content .profile-sections .input-flex-layout {
   display: flex;
   flex-flow: row wrap;

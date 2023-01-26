@@ -722,6 +722,19 @@
                     margin-top: 50px;
                 }
             }
+            .input-wrap{
+                textarea{
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    background: #f7f7f7;
+                    padding: 20px;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                    outline: none;
+                }
+            }
+            
             .input-flex-layout{
                 display: flex;
                 flex-flow: row wrap;
