@@ -85,3 +85,24 @@ function loginMypageToggle(){
     const afterLoginMenu = document.querySelector('.after-login-menu')
     afterLoginMenu.classList.toggle('active')
 }
+
+const tabContents = document.querySelectorAll('.gnb-tab-content')
+const tabLists = document.querySelectorAll('.gnb-tab-list')
+
+tabLists.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+        hideAllContents()
+        hideAllItems()
+        item.classList.add('active')
+        tabContents[idx].classList.add('active')
+    })
+
+})
+
+function hideAllContents() {
+    tabContents.forEach(tabContent => tabContent.classList.remove('active'))
+}
+
+function hideAllItems() {
+    tabLists.forEach(tabList => tabList.classList.remove('active'))
+}
