@@ -4399,7 +4399,10 @@ header .header-left .gnb-lists .gnb-list > a {
   padding: 12px 30px;
 }
 .new-sub .profile-content .profile-sections {
-  margin-top: 40px;
+  margin-top: 60px;
+}
+.new-sub .profile-content .profile-sections .profile-section {
+  border-bottom: 1px solid #eee;
 }
 .new-sub .profile-content .profile-sections .profile-section .profile-section-tit {
   font-size: 20px;
@@ -4443,7 +4446,6 @@ header .header-left .gnb-lists .gnb-list > a {
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox {
   margin: 0;
-  flex: 1;
   align-items: center;
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox + .custom-checkbox {
@@ -4451,6 +4453,10 @@ header .header-left .gnb-lists .gnb-list > a {
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox label {
   font-weight: 400;
+  white-space: nowrap;
+}
+.new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox input {
+  min-width: 60px;
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap select {
   flex: 1;
@@ -4475,6 +4481,7 @@ header .header-left .gnb-lists .gnb-list > a {
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .prefer-input-wrap > label {
   margin-bottom: 20px;
+  font-weight: 500;
 }
 .new-sub .profile-content .profile-sections .input-flex-layout .prefer-input-wrap .input-wrap {
   width: 100%;
@@ -4509,6 +4516,25 @@ header .header-left .gnb-lists .gnb-list > a {
   }
   .new-sub .payment-done-wrap .payment-done-left .payment-done-btns {
     margin-top: 40px;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout {
+    display: block;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap > span {
+    min-height: auto !important;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .prefer-lecture-check .custom-checkbox {
+    flex: 1;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox .label-txt {
+    padding-left: 25px;
+  }
+  .new-sub .profile-content .profile-sections .input-flex-layout .input-wrap .custom-checkbox input {
+    min-width: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -4569,5 +4595,16 @@ header .header-left .gnb-lists .gnb-list > a {
   }
   .new-sub .payment-done-wrap .payment-done-btns {
     justify-content: center;
+  }
+  .new-sub .profile-content .profile-top .profile-top-left strong {
+    font-size: 22px;
+  }
+  .new-sub .profile-content .profile-top .btn {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    z-index: 100;
   }
 }/*# sourceMappingURL=app.css.map */

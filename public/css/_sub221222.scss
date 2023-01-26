@@ -711,8 +711,9 @@
             }
         }
         .profile-sections{
-            margin-top: 40px;
+            margin-top: 60px;
             .profile-section{
+                border-bottom: 1px solid #eee;
                 .profile-section-tit{
                     font-size: 20px;
                     margin-bottom: 30px;
@@ -758,14 +759,16 @@
                     }
                     .custom-checkbox{
                         margin: 0;
-                        // min-width: 50px;
-                        flex: 1;
                         align-items: center;
                         & +.custom-checkbox{
                             margin-left: 10px;
                         }
                         label{
                             font-weight: 400;
+                            white-space: nowrap;
+                        }
+                        input{
+                            min-width: 60px;
                         }
                     }
                     select{
@@ -791,6 +794,7 @@
                     width: calc(50% - 30px);
                     >label{
                         margin-bottom: 20px;
+                        font-weight: 500;
                     }
                     .input-wrap{
                         width: 100%;
@@ -838,6 +842,33 @@
                 }
                 .payment-done-btns{
                     margin-top: 40px;
+                }
+            }
+        }
+        .profile-content {
+            .profile-sections {
+                .input-flex-layout{
+                    display: block;
+                    .input-wrap{
+                        width: 100%!important;
+                        height: auto!important;
+                        >span{
+                            min-height: auto!important;
+                        }
+                        .prefer-lecture-check{
+                            .custom-checkbox{
+                                flex:1
+                            }
+                        }
+                        .custom-checkbox {
+                            .label-txt{
+                                padding-left: 25px;
+                            }
+                            input{
+                                min-width: 40px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -915,6 +946,23 @@
             }
             .payment-done-btns{
                 justify-content: center;
+            }
+        }
+        .profile-content {
+            .profile-top {
+                .profile-top-left{
+                    strong{
+                        font-size: 22px;
+                    }
+                }
+                .btn{
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    border-radius: 0;
+                    z-index: 100;
+                }
             }
         }
     }
