@@ -4811,4 +4811,7 @@ header .header-left .gnb-lists .gnb-list > a {
     padding: 15px;
     font-size: 14px;
   }
+  .new-sub .mypage-dashboard-wrap .mypage-content-bottom ul li.ad img {
+    height: 105px;
+  }
 }/*# sourceMappingURL=app.css.map */
